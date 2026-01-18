@@ -1,0 +1,9 @@
+{
+    "name": "lumiera-beauty-root",
+    "version": "1.0.0",
+    "description": "Root project for Lumiera Beauty",
+    "scripts": {
+        "start": "npm start --prefix backend",
+        "install-backend": "npm install --prefix backend"
+    }
+}

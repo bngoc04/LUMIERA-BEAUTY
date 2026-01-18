@@ -1,0 +1,887 @@
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+<div data-layer="HOME PAGE" class="HomePage"
+    style="width: 100%; max-width: 1920px; background: white; overflow-x: hidden; margin: 0 auto; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
+    <div data-layer="Hero" class="Hero"
+        style="align-self: stretch; height: 1150px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
+        <div data-layer="Header" class="Header"
+            style="align-self: stretch; padding: 20px 72px 20px 72px; justify-content: space-between; align-items: center; display: flex; position: fixed; top: 0; z-index: 1000; background: white; width: 100%; box-sizing: border-box;">
+            <img data-layer="image 43" class="Image43" style="width: 213px; height: auto"
+                src="assets/lumiera_logo_new.png" />
+            <div data-layer="Menu" class="Menu"
+                style="width: 911px; height: 49px; justify-content: flex-start; align-items: flex-start; display: flex">
+                <div data-layer="Hoome" class="Hoome"
+                    style="width: 132px; padding-top: 4px; padding-bottom: 4px; justify-content: center; align-items: center; gap: 10px; display: flex">
+                    <a href="homepage.html" data-layer="Home" class="Home"
+                        style="color: #955D34; font-size: 32px; font-family: Inter; font-weight: 700; word-wrap: break-word; text-decoration: none;">
+                        Home</a>
+                </div>
+                <div data-layer="Services" class="Services"
+                    style="width: 199px; padding-top: 4px; padding-bottom: 4px; justify-content: center; align-items: center; gap: 10px; display: flex">
+                    <a href="services.html" data-layer="Services" class="Services"
+                        style="color: #955D34; font-size: 32px; font-family: Inter; font-weight: 400; word-wrap: break-word; text-decoration: none;">
+                        Services</a>
+                </div>
+                <div data-layer="Services" class="Services"
+                    style="width: 207px; padding-top: 4px; padding-bottom: 4px; justify-content: center; align-items: center; gap: 10px; display: flex">
+                    <a href="lumiera_ai.html" data-layer="Lumiera AI" class="LumieraAi"
+                        style="color: #955D34; font-size: 32px; font-family: Inter; font-weight: 400; word-wrap: break-word; text-decoration: none;">
+                        Lumiera AI</a>
+                </div>
+                <div data-layer="About Us" class="AboutUs"
+                    style="width: 186px; padding-top: 4px; padding-bottom: 4px; justify-content: center; align-items: center; gap: 10px; display: flex">
+                    <a href="about.html" data-layer="About Us" class="AboutUs"
+                        style="width: 152px; color: #955D34; font-size: 32px; font-family: Inter; font-weight: 400; word-wrap: break-word; text-decoration: none; text-align: center;">
+                        About Us</a>
+                </div>
+                <div data-layer="Contact Us" class="ContactUs"
+                    style="width: 265px; padding-top: 4px; padding-bottom: 4px; padding-right: 76px; justify-content: center; align-items: center; gap: 10px; display: flex">
+                    <a href="contact.html" data-layer="Contact Us" class="ContactUs"
+                        style="width: 187px; color: #955D34; font-size: 32px; font-family: Inter; font-weight: 400; word-wrap: break-word; text-decoration: none; text-align: center;">
+                        Contact Us</a>
+                </div>
+            </div>
+            <div class="user-profile-container" style="position: relative; cursor: pointer; z-index: 1001;">
+                <div class="profile-icon" onclick="toggleProfileMenu(event)"
+                    style="width: 58px; height: 58px; display: block;">
+                    <div data-svg-wrapper data-layer="Ellipse 32" class="Ellipse32">
+                        <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <circle cx="29" cy="29" r="29" fill="url(#pattern_home_unique)" />
+                            <defs>
+                                <pattern id="pattern_home_unique" patternContentUnits="objectBoundingBox" width="1"
+                                    height="1">
+                                    <use xlink:href="#image_home_unique" transform="scale(0.0013587)" />
+                                </pattern>
+                                <image id="image_home_unique" width="736" height="736" preserveAspectRatio="none"
+                                    xlink:href="assets/home2_img_acb1eaef.png" />
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <div id="profile-dropdown" class="profile-dropdown-menu"
+                    style="display: none; position: absolute; top: 100%; right: 0; background: white; border: 1px solid #ccc; border-radius: 8px; padding: 10px; width: 180px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); flex-direction: column; gap: 5px;">
+                    <a href="hoso.html" class="dropdown-item"
+                        style="display: block; padding: 10px 12px; text-decoration: none; color: black; font-family: Inter; font-size: 16px; border-radius: 4px; transition: background 0.2s;">Hồ
+                        sơ</a>
+                    <a href="datlich.html" class="dropdown-item"
+                        style="display: block; padding: 10px 12px; text-decoration: none; color: black; font-family: Inter; font-size: 16px; border-radius: 4px; transition: background 0.2s;">Đặt
+                        lịch</a>
+                    <div style="height: 1px; background: #eee; margin: 5px 0;"></div>
+                    <a href="đangnhap.html" class="dropdown-item"
+                        style="display: block; padding: 10px 12px; text-decoration: none; color: #d32f2f; font-family: Inter; font-size: 16px; border-radius: 4px; transition: background 0.2s;">Đăng
+                        xuất</a>
+                </div>
+            </div>
+            <script src="./script.js"></script>
+        </div>
+        <div data-layer="Icon" class="Icon" style="width: 256px; height: 256px; position: relative; margin-top: 110px;">
+            <div data-svg-wrapper data-layer="Vector" class="Vector" style="left: 0px; top: 53px; position: absolute">
+                <svg width="256" height="195" viewBox="0 0 256 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M254.025 137.428C253.245 136.578 236.841 118.925 213.667 110.031C221.174 97.6045 225.5 83.0485 225.5 67.5V52.5C225.5 48.358 222.142 45 218 45H203C188.825 45 175.222 48.5255 163.072 55.2775C155.765 25.139 134.41 3.3125 133.322 2.2165C131.914 0.797499 129.998 0 128 0C126.001 0 124.085 0.7975 122.677 2.216C121.589 3.312 100.234 25.139 92.9268 55.277C80.7773 48.5255 67.1743 45 52.9998 45H37.9998C33.8578 45 30.4998 48.358 30.4998 52.5V67.5C30.4998 83.0485 34.8253 97.6045 42.3333 110.032C19.1593 118.925 2.75532 136.578 1.97532 137.428C-0.652178 140.289 -0.659178 144.684 1.95882 147.555C3.16682 148.879 31.9663 180 67.9998 180C79.3593 180 89.9488 176.908 99.1663 172.632C108.894 185.303 123.623 193.645 124.337 194.045C125.475 194.682 126.738 195 128 195C129.263 195 130.525 194.682 131.663 194.045C132.377 193.645 147.106 185.303 156.834 172.632C166.051 176.908 176.64 180 188 180C224.033 180 252.833 148.879 254.041 147.554C256.659 144.684 256.652 140.289 254.025 137.428ZM128.011 18.9465C136.091 29.0715 150.5 50.5555 150.5 75C150.5 99.348 136.065 120.901 127.989 131.053C119.908 120.928 105.5 99.4445 105.5 75C105.5 50.652 119.935 29.0985 128.011 18.9465ZM67.9998 165C46.5878 165 27.2903 150.469 18.3283 142.512C24.9543 136.645 37.1963 127.212 51.6938 122.645C65.8153 138.329 85.8518 148.583 108.254 149.86C96.5453 158.391 82.4793 165 67.9998 165ZM45.4998 67.5V60H52.9998C66.5548 60 79.4618 63.949 90.5828 71.4355C90.5293 72.616 90.4998 73.804 90.4998 75C90.4998 100.133 102.738 121.948 112.13 134.989C75.3103 134.521 45.4998 104.429 45.4998 67.5ZM128 178.662C123.986 175.993 117.46 171.181 112.428 165.212C119.015 160.89 124.336 156.428 127.999 153.058C131.662 156.428 136.984 160.89 143.57 165.212C138.538 171.182 132.011 175.995 128 178.662ZM165.5 75C165.5 73.804 165.47 72.616 165.417 71.4355C176.538 63.949 189.445 60 203 60H210.5V67.5C210.5 104.429 180.689 134.521 143.869 134.989C153.261 121.948 165.5 100.133 165.5 75ZM188 165C172.285 165 157.845 157.164 147.795 149.857C170.177 148.568 190.195 138.318 204.306 122.645C218.815 127.215 231.063 136.659 237.684 142.522C228.751 150.482 209.509 165 188 165Z"
+                        fill="#6B0606" fill-opacity="0.03" />
+                </svg>
+            </div>
+            <div data-svg-wrapper data-layer="Vector" class="Vector"
+                style="left: 120.50px; top: 8px; position: absolute">
+                <svg width="15" height="30" viewBox="0 0 15 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M7.5 0C3.358 0 0 3.358 0 7.5V22.5C0 26.642 3.358 30 7.5 30C11.642 30 15 26.642 15 22.5V7.5C15 3.358 11.642 0 7.5 0Z"
+                        fill="#6B0606" fill-opacity="0.03" />
+                </svg>
+            </div>
+            <div data-svg-wrapper data-layer="Vector" class="Vector"
+                style="left: 55.20px; top: 40.20px; position: absolute">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M23.4097 12.8032L12.8032 2.19675C9.87425 -0.73225 5.12575 -0.73225 2.19675 2.19675C-0.73225 5.12575 -0.73225 9.87425 2.19675 12.8032L12.8032 23.4097C15.7317 26.3382 20.4802 26.3392 23.4097 23.4097C26.3387 20.4807 26.3387 15.7322 23.4097 12.8032Z"
+                        fill="#6B0606" fill-opacity="0.03" />
+                </svg>
+            </div>
+            <div data-svg-wrapper data-layer="Vector" class="Vector"
+                style="left: 175.20px; top: 40.20px; position: absolute">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M23.4094 2.19675C20.4804 -0.73225 15.7319 -0.73225 12.8024 2.19675L2.19637 12.8032C-0.732125 15.7322 -0.732125 20.4807 2.19637 23.4097C5.12488 26.3387 9.87388 26.3387 12.8029 23.4097L23.4094 12.8032C26.3379 9.87425 26.3379 5.12575 23.4094 2.19675Z"
+                        fill="#6B0606" fill-opacity="0.03" />
+                </svg>
+            </div>
+        </div>
+        <div data-layer="Home" class="Home"
+            style="color: #955D34; font-size: 96px; font-family: 'Pinyon Script', cursive; font-weight: 400; word-wrap: break-word">
+            Home</div>
+        <img data-layer="Img" class="Img" style="align-self: stretch; height: 830px; margin-top: 0px;"
+            src="assets/home2_img_be40d97f.png" />
+    </div>
+    <div data-layer="Elegance comes from being as beautiful inside as outside"
+        class="EleganceComesFromBeingAsBeautifulInsideAsOutside"
+        style="align-self: stretch; height: 1150px; padding-left: 72px; padding-right: 72px; padding-top: 60px; padding-bottom: 60px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 40px; display: flex">
+        <div data-layer="Text" class="Text"
+            style="flex-direction: column; justify-content: flex-start; align-items: center; gap: 20px; display: flex">
+            <div data-layer="Vẻ đẹp thanh tao đến từ tâm hồn cũng rạng rỡ như vẻ ngoài"
+                class="VPThanhTaoNTTMHNCNgRNgRNhVNgoI"
+                style="width: 768px; text-align: center; color: #6B0606; font-size: 32px; font-family: Agbalumo; font-weight: 400; word-wrap: break-word">
+                Vẻ đẹp thanh tao đến từ tâm hồn cũng rạng rỡ như vẻ ngoài</div>
+            <div data-layer="" Những yếu tố của cuộc sống được sắp đặt hợp lý. Đó là kết quả của sự chăm sóc và rèn
+                luyện không ngừng. Một cuộc sống bình yên và trọn vẹn sẽ không có những lo âu không đáng có. Mỗi bước đi
+                đều mang lại sự ổn định và định hướng cho tương lai.""
+                class="NhNgYUTCACuCSNgCSPTHPLLKTQuCASChMSCVRNLuyNKhNgNgNgMTCuCSNgBNhYNVTrNVNSKhNgCNhNgLoUKhNgNgCMIBCIUMangLISNNhVNhHNgChoTNgLai"
+                style="width: 827px; text-align: center; color: rgba(0, 0, 0, 0.50); font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+                "Những yếu tố của cuộc sống được sắp đặt hợp lý. Đó là kết quả của sự chăm sóc và rèn luyện không ngừng.
+                Một cuộc sống bình yên và trọn vẹn sẽ không có những lo âu không đáng có. Mỗi bước đi đều mang lại sự ổn
+                định và định hướng cho tương lai."</div>
+        </div>
+        <div data-layer="Cards" class="Cards"
+            style="justify-content: flex-start; align-items: flex-start; gap: 24px; display: inline-flex">
+            <div data-layer="Card 1" class="Card1"
+                style="width: 306px; height: 320px; padding: 24px; overflow: hidden; background-image: url(assets/extracted_img_e7c3c025d0.png); flex-direction: column; justify-content: flex-end; align-items: flex-start; gap: 10px; display: inline-flex">
+                <!-- Content removed to avoid duplication with background image
+                <div data-layer="icon+text" class="IconText"
+                    style="justify-content: flex-start; align-items: flex-end; gap: 24px; display: inline-flex">
+                    <div data-layer="Icon" class="Icon"
+                        style="width: 64px; height: 64px; padding: 8px; background: white; overflow: hidden; justify-content: center; align-items: center; gap: 10px; display: flex">
+                        <div data-svg-wrapper data-layer="inclined-makeup-brush" class="InclinedMakeupBrush"
+                            style="position: relative">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_179_1300)">
+                                    <path
+                                        d="M39.7838 7.77552C39.3758 6.05236 38.3955 4.34793 37.0237 2.97619C35.6417 1.59413 33.9936 0.642497 32.2575 0.224014C30.5064 -0.198179 28.8009 -0.0195273 27.4552 0.726845C27.0983 0.924864 26.5011 1.2561 24.1504 6.6551C23.2014 8.83476 22.3418 10.9836 22.1088 11.5705L16.773 17.2397C16.4183 16.9058 15.8599 16.9124 15.513 17.2591C15.1596 17.6125 15.1596 18.1855 15.513 18.539L15.5322 18.5581L0.950601 34.0511C-0.345572 35.4286 -0.311995 37.6372 1.02545 38.9745C1.70792 39.657 2.61711 39.9998 3.52711 39.9998C4.40028 39.9998 5.27435 39.684 5.94886 39.0493L21.442 24.4677L21.461 24.4868C21.8144 24.8401 22.3875 24.8401 22.741 24.4868C23.0878 24.1399 23.0942 23.5816 22.7604 23.2269L28.4946 17.83C29.091 17.5971 31.205 16.765 33.3511 15.8444C38.7004 13.5498 39.0394 12.9553 39.2419 12.6001C40.0095 11.2541 40.202 9.54068 39.7838 7.77552ZM4.70835 37.7311C4.04741 38.3532 2.94699 38.3364 2.30524 37.6947C1.66349 37.053 1.64684 35.9525 2.26868 35.2916L16.8127 19.8385L20.1614 23.1872L4.70835 37.7311ZM21.4801 21.9461L18.0538 18.5198L22.9692 13.2972L23.9834 14.3114C23.9897 14.3178 23.9961 14.3244 24.0026 14.3306L25.6715 15.9994C25.6765 16.0045 25.6814 16.0095 25.6865 16.0144L26.7028 17.0307L21.4801 21.9461ZM37.6931 11.6617C37.0513 12.3067 32.4146 14.3517 28.2246 15.9928L27.694 15.4621L33.0477 11.4259C33.4468 11.125 33.5264 10.5575 33.2255 10.1584C32.9247 9.75951 32.3572 9.67978 31.958 9.98052L26.4016 14.1697L25.8302 13.5983L30.0193 8.04196C30.3202 7.64284 30.2406 7.0753 29.8415 6.77438C29.4423 6.47356 28.8748 6.5532 28.574 6.95222L24.5378 12.3058L23.9839 11.7519C25.662 7.54664 27.7302 2.92876 28.3782 2.28502C30.4155 1.19212 33.5031 2.01514 35.744 4.25598C38.0061 6.51817 38.8203 9.62322 37.6931 11.6617Z"
+                                        fill="#6B0606" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_179_1300">
+                                        <rect width="40" height="40" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <div data-layer="Trang điểm" class="TrangIM"
+                        style="text-align: center; color: white; font-size: 32px; font-family: Abhaya Libre; font-weight: 700; word-wrap: break-word">
+                        Trang điểm</div>
+                </div>
+                -->
+            </div>
+            <div data-layer="Card 2" class="Card2"
+                style="width: 306px; height: 320px; padding: 24px; overflow: hidden; background-image: url(assets/extracted_img_5ec4a31c87.png); flex-direction: column; justify-content: flex-end; align-items: flex-start; gap: 10px; display: inline-flex">
+                <!-- Content removed to avoid duplication with background image
+                <div data-layer="icon+text" class="IconText"
+                    style="justify-content: flex-start; align-items: flex-end; gap: 24px; display: inline-flex">
+                    <div data-layer="Icon" class="Icon"
+                        style="width: 64px; height: 64px; padding: 8px; background: white; overflow: hidden; justify-content: center; align-items: center; gap: 10px; display: flex">
+                        <div data-svg-wrapper data-layer="hair-comb" class="HairComb" style="position: relative">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M39.7419 11.6129L33.8506 5.72156C33.8499 5.72086 33.8492 5.72015 33.8486 5.71954L31.8733 3.74441C31.4987 3.36986 31.0007 3.16351 30.471 3.16333C30.4709 3.16333 30.4706 3.16333 30.4704 3.16333C29.9407 3.16333 29.4427 3.3695 29.0681 3.74414L0.828728 31.9986C-0.276243 33.1037 -0.276243 34.9016 0.828728 36.0067C1.36399 36.542 2.07573 36.8368 2.83276 36.8368C3.58979 36.8368 4.30153 36.542 4.83705 36.0064L15.5481 25.2861L20.8084 30.5464C21.1526 30.8905 21.7103 30.8905 22.0545 30.5464C22.3986 30.2024 22.3986 29.6445 22.0545 29.3004L16.7937 24.0395L18.4948 22.3369L23.7564 27.5985C24.1006 27.9426 24.6583 27.9426 25.0026 27.5985C25.3466 27.2544 25.3466 26.6965 25.0026 26.3525L19.7404 21.0903L21.4415 19.3877L26.7043 24.6506C27.0485 24.9946 27.6064 24.9947 27.9504 24.6506C28.2945 24.3065 28.2945 23.7486 27.9504 23.4045L22.687 18.1411L24.3881 16.4385L29.6523 21.7026C29.9965 22.0467 30.5542 22.0467 30.8984 21.7026C31.2425 21.3586 31.2425 20.8007 30.8984 20.4566L25.6336 15.1918L27.3348 13.4892L32.6003 18.7547C32.9444 19.0987 33.5021 19.0987 33.8464 18.7547C34.1905 18.4106 34.1905 17.8527 33.8464 17.5086L28.5803 12.2427L30.2814 10.54L35.5482 15.8068C35.8924 16.1509 36.4501 16.1509 36.7943 15.8068C37.1384 15.4628 37.1384 14.9049 36.7943 14.5608L31.527 9.29349L33.2281 7.59088L38.4961 12.8589C38.8402 13.203 39.3981 13.203 39.7423 12.8589C40.086 12.5149 40.086 11.957 39.7419 11.6129ZM29.6982 8.63047C29.684 8.64298 29.6702 8.65593 29.6566 8.6695C29.6429 8.68325 29.6297 8.69735 29.6171 8.71171L26.7679 11.5633C26.7475 11.5803 26.7278 11.5983 26.7087 11.6174C26.6894 11.6367 26.6713 11.6567 26.6542 11.6772L23.8342 14.4997C23.8088 14.5199 23.7843 14.5419 23.7608 14.5654C23.7372 14.5891 23.7149 14.6138 23.6946 14.6394L20.8981 17.4383C20.8685 17.4612 20.8401 17.4862 20.8129 17.5133C20.7856 17.5406 20.7605 17.5693 20.7376 17.599L17.9609 20.3781C17.9275 20.4031 17.8955 20.4308 17.8651 20.4612C17.8345 20.4917 17.8066 20.524 17.7815 20.5576L15.0228 23.3188C14.9858 23.3457 14.9505 23.3758 14.9172 23.409C14.8837 23.4425 14.8534 23.4781 14.8265 23.5152L3.59076 34.7606C3.38828 34.9631 3.11911 35.0745 2.83276 35.0745C2.54641 35.0745 2.27723 34.963 2.07476 34.7606C1.65677 34.3426 1.65677 33.6625 2.07485 33.2444L30.3144 4.99009C30.3677 4.93669 30.4287 4.9255 30.4704 4.9255H30.4705C30.5124 4.9255 30.5736 4.93678 30.6272 4.99044L31.9817 6.34484L29.6982 8.63047Z"
+                                    fill="#6B0606" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div data-layer="hair styling" class="HairStyling"
+                        style="text-align: center; color: white; font-size: 32px; font-family: Abhaya Libre; font-weight: 700; word-wrap: break-word">
+                        hair styling</div>
+                </div>
+                -->
+            </div>
+            <div data-layer="Card 3" class="Card3"
+                style="width: 306px; height: 320px; padding: 24px; overflow: hidden; background-image: url(assets/extracted_img_0f863b6206.png); flex-direction: column; justify-content: flex-end; align-items: flex-start; gap: 10px; display: inline-flex">
+                <!-- Content removed to avoid duplication with background image
+                <div data-layer="icon+text" class="IconText"
+                    style="justify-content: flex-start; align-items: flex-end; gap: 24px; display: inline-flex">
+                    <div data-layer="Icon" class="Icon"
+                        style="width: 64px; height: 64px; padding: 8px; background: white; overflow: hidden; justify-content: center; align-items: center; gap: 10px; display: flex">
+                        <div data-svg-wrapper data-layer="finger-with-nail" class="FingerWithNail"
+                            style="position: relative">
+
+                        </div>
+                    </div>
+                    <div data-layer="nail care" class="NailCare"
+                        style="text-align: center; color: white; font-size: 32px; font-family: Abhaya Libre; font-weight: 700; word-wrap: break-word">
+                        nail care</div>
+                </div>
+                -->
+            </div>
+            <div data-layer="Card" class="Card"
+                style="width: 306px; height: 320px; padding: 24px; overflow: hidden; background-image: url(assets/extracted_img_41badfb1bb.png); flex-direction: column; justify-content: flex-end; align-items: flex-start; gap: 10px; display: inline-flex">
+                <!-- Content removed to avoid duplication with background image
+                <div data-layer="icon+text" class="IconText"
+                    style="justify-content: flex-start; align-items: flex-end; gap: 24px; display: inline-flex">
+                    <div data-layer="Icon" class="Icon"
+                        style="width: 64px; height: 64px; padding: 8px; background: white; overflow: hidden; justify-content: center; align-items: center; gap: 10px; display: flex">
+                        <div data-svg-wrapper data-layer="facial-cream" class="FacialCream" style="position: relative">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.9165 32.7899C6.15484 31.9655 1.80995 26.9477 1.80995 21.1179C1.80995 14.6154 7.10009 9.32536 13.6024 9.32536C14.3825 9.32536 15.1644 9.40256 15.9265 9.55478C16.4168 9.65279 16.8934 9.3346 16.9912 8.84455C17.0891 8.35442 16.7711 7.87767 16.2811 7.77975C15.4025 7.60437 14.5014 7.51532 13.6024 7.51532C6.10208 7.51541 0 13.6175 0 21.1179C0 24.4114 1.19249 27.5893 3.35792 30.0661C5.50226 32.5188 8.45068 34.1224 11.6601 34.5817C11.7036 34.5878 11.7468 34.5909 11.7894 34.5909C12.2324 34.5909 12.6195 34.2653 12.6842 33.814C12.7549 33.3191 12.4112 32.8607 11.9165 32.7899Z"
+                                    fill="#6B0606" />
+
+                            </svg>
+                        </div>
+                    </div>
+                    <div data-layer="Thẩm mỹ học" class="ThMMHC"
+                        style="text-align: center; color: white; font-size: 32px; font-family: Abhaya Libre; font-weight: 700; word-wrap: break-word">
+                        Thẩm mỹ học</div>
+                </div>
+                -->
+            </div>
+        </div>
+        <div data-layer="Treatments and prices" class="TreatmentsAndPrices"
+            style="width: 1242px; height: 374px; justify-content: flex-start; align-items: center; gap: 110px; display: inline-flex">
+            <img data-layer="Img" class="Img" style="width: 492px; height: 374px" src="assets/home2_img_04d6509f.png" />
+            <div data-layer="Price list" class="PriceList"
+                style="width: 526px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 28px; display: inline-flex">
+                <div data-layer="Text" class="Text"
+                    style="width: 526px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 20px; display: flex">
+                    <div data-layer="Treatments and prices" class="TreatmentsAndPrices"
+                        style="color: #6B0606; font-size: 32px; font-family: Agbalumo; font-weight: 400; word-wrap: break-word">
+                        Liệu trình và giá cả</div>
+                    <div data-layer="Velit in dui dictum arcu felis tempor in feugiat in mauris ut dictum at magna cursus. Malesuada aliquet ut lorem mollis vitae etiam sed eu suspendisse. Aliquam phasellus orci nulla sed est. Duis nisl placerat aliquet penatibus tellus. Augue faucibus at suspendisse porta feugiat malesuada quisque proin."
+                        class="VelitInDuiDictumArcuFelisTemporInFeugiatInMaurisUtDictumAtMagnaCursusMalesuadaAliquetUtLoremMollisVitaeEtiamSedEuSuspendisseAliquamPhasellusOrciNullaSedEstDuisNislPlaceratAliquetPenatibusTellusAugueFaucibusAtSuspendissePortaFeugiatMalesuadaQuisqueProin"
+                        style="width: 440px; height: 27px"></div>
+                </div>
+                <div data-layer="Product names" class="ProductNames"
+                    style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 24px; display: flex">
+                    <div data-layer="Product name" class="ProductName"
+                        style="width: 440px; height: 12px; justify-content: flex-start; align-items: flex-end; gap: 8px; display: inline-flex">
+                        <div data-layer="Nail care" class="NailCare"
+                            style="text-box-trim: trim-both; text-box-edge: cap alphabetic; color: black; font-size: 16px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                            Chăm sóc móng</div>
+                        <div data-layer="Line 2" class="Line2"
+                            style="flex: 1 1 0; height: 0px; outline: 1px rgba(0, 0, 0, 0.50) solid; outline-offset: -0.50px">
+                        </div>
+                        <div data-layer="Frame 269" class="Frame269"
+                            style="justify-content: flex-end; align-items: flex-end; gap: 4px; display: flex">
+                            <div data-layer="from" class="From"
+                                style="text-box-trim: trim-both; text-box-edge: cap alphabetic; color: rgba(0, 0, 0, 0.50); font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+                                Từ</div>
+                            <div data-layer="$25" class="25"
+                                style="text-box-trim: trim-both; text-box-edge: cap alphabetic; color: #6B0606; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+                                640.000 VNĐ</div>
+                        </div>
+                    </div>
+                    <div data-layer="Product name" class="ProductName"
+                        style="width: 440px; height: 12px; justify-content: flex-start; align-items: flex-end; gap: 8px; display: inline-flex">
+                        <div data-layer="Nail care" class="NailCare"
+                            style="text-box-trim: trim-both; text-box-edge: cap alphabetic; color: black; font-size: 16px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                            Tạo kiểu tóc</div>
+                        <div data-layer="Line 2" class="Line2"
+                            style="flex: 1 1 0; height: 0px; outline: 1px rgba(0, 0, 0, 0.50) solid; outline-offset: -0.50px">
+                        </div>
+                        <div data-layer="Frame 269" class="Frame269"
+                            style="justify-content: flex-end; align-items: flex-end; gap: 4px; display: flex">
+                            <div data-layer="from" class="From"
+                                style="text-box-trim: trim-both; text-box-edge: cap alphabetic; color: rgba(0, 0, 0, 0.50); font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+                                Từ</div>
+                            <div data-layer="$25" class="25"
+                                style="text-box-trim: trim-both; text-box-edge: cap alphabetic; color: #6B0606; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+                                765.000 VNĐ</div>
+                        </div>
+                    </div>
+                    <div data-layer="Product name" class="ProductName"
+                        style="width: 440px; height: 12px; justify-content: flex-start; align-items: flex-end; gap: 8px; display: inline-flex">
+                        <div data-layer="Nail care" class="NailCare"
+                            style="text-box-trim: trim-both; text-box-edge: cap alphabetic; color: black; font-size: 16px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                            Trang điểm</div>
+                        <div data-layer="Line 2" class="Line2"
+                            style="flex: 1 1 0; height: 0px; outline: 1px rgba(0, 0, 0, 0.50) solid; outline-offset: -0.50px">
+                        </div>
+                        <div data-layer="Frame 269" class="Frame269"
+                            style="justify-content: flex-end; align-items: flex-end; gap: 4px; display: flex">
+                            <div data-layer="from" class="From"
+                                style="text-box-trim: trim-both; text-box-edge: cap alphabetic; color: rgba(0, 0, 0, 0.50); font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+                                Từ</div>
+                            <div data-layer="$25" class="25"
+                                style="text-box-trim: trim-both; text-box-edge: cap alphabetic; color: #6B0606; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+                                1.275.000 VNĐ</div>
+                        </div>
+                    </div>
+                    <div data-layer="Product name" class="ProductName"
+                        style="width: 440px; height: 12px; justify-content: flex-start; align-items: flex-end; gap: 8px; display: inline-flex">
+                        <div data-layer="Nail care" class="NailCare"
+                            style="text-box-trim: trim-both; text-box-edge: cap alphabetic; color: black; font-size: 16px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                            Thẩm mỹ học</div>
+                        <div data-layer="Line 2" class="Line2"
+                            style="flex: 1 1 0; height: 0px; outline: 1px rgba(0, 0, 0, 0.50) solid; outline-offset: -0.50px">
+                        </div>
+                        <div data-layer="Frame 269" class="Frame269"
+                            style="justify-content: flex-end; align-items: flex-end; gap: 4px; display: flex">
+                            <div data-layer="from" class="From"
+                                style="text-box-trim: trim-both; text-box-edge: cap alphabetic; color: rgba(0, 0, 0, 0.50); font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+                                Từ</div>
+                            <div data-layer="$25" class="25"
+                                style="text-box-trim: trim-both; text-box-edge: cap alphabetic; color: #6B0606; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+                                765.000 VNĐ</div>
+                        </div>
+                    </div>
+                    <div data-layer="Product name" class="ProductName"
+                        style="width: 440px; height: 12px; justify-content: flex-start; align-items: flex-end; gap: 8px; display: inline-flex">
+                        <div data-layer="Nail care" class="NailCare"
+                            style="text-box-trim: trim-both; text-box-edge: cap alphabetic; color: black; font-size: 16px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                            Liệu trình SPA</div>
+                        <div data-layer="Line 2" class="Line2"
+                            style="flex: 1 1 0; height: 0px; outline: 1px rgba(0, 0, 0, 0.50) solid; outline-offset: -0.50px">
+                        </div>
+                        <div data-layer="Frame 269" class="Frame269"
+                            style="justify-content: flex-end; align-items: flex-end; gap: 4px; display: flex">
+                            <div data-layer="from" class="From"
+                                style="text-box-trim: trim-both; text-box-edge: cap alphabetic; color: rgba(0, 0, 0, 0.50); font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+                                Từ</div>
+                            <div data-layer="$25" class="25"
+                                style="text-box-trim: trim-both; text-box-edge: cap alphabetic; color: #6B0606; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+                                1.020.000 VNĐ</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="services.html" data-layer="Text" class="Text"
+                    style="color: #6B0606; font-size: 16px; font-family: Inter; font-weight: 500; text-decoration: underline; word-wrap: break-word">
+                    Xem tất cả</a>
+            </div>
+        </div>
+    </div>
+    <div data-layer="Testimonials" class="Testimonials"
+        style="align-self: stretch; padding-bottom: 60px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
+        <div data-layer="Text+bg" class="TextBg"
+            style="align-self: stretch; height: 281px; padding-top: 40px; padding-left: 283px; padding-right: 200px; background: #F3E2D5; flex-direction: column; justify-content: flex-start; align-items: center; gap: 10px; display: flex">
+            <div data-layer="Text" class="Text"
+                style="flex-direction: column; justify-content: flex-start; align-items: center; gap: 20px; display: flex">
+                <div data-layer="Ý kiến khách hàng" class="KiNKhChHNg"
+                    style="width: 667px; text-align: center; color: #6B0606; font-size: 32px; font-family: Agbalumo; font-weight: 400; word-wrap: break-word">
+                    Ý kiến khách hàng</div>
+                <div data-layer="" Sự kết hợp hoàn hảo của các yếu tố tự nhiên mang lại vẻ đẹp thuần khiết. Những liệu
+                    trình được thiết kế tinh tế giúp nuôi dưỡng và tái tạo năng lượng cho làn da. Chúng tôi mang đến sự
+                    chăm sóc tận tâm để bạn tận hưởng những phút giây thư giãn tuyệt vời nhất.""
+                    class="SKTHPHoNHOCACCYUTTNhiNMangLIVPThuNKhiTNhNgLiUTrNhCThiTKTinhTGiPNuIDNgVTITONNgLNgChoLNDaChNgTIMangNSChMSCTNTMBNTNHNgNhNgPhTGiYThGiNTuyTVINhT"
+                    style="width: 982px; height: 53px; text-align: center; color: rgba(0, 0, 0, 0.50); font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+                    "Sự kết hợp hoàn hảo của các yếu tố tự nhiên mang lại vẻ đẹp thuần khiết. Những liệu trình được
+                    thiết kế tinh tế giúp nuôi dưỡng và tái tạo năng lượng cho làn da. Chúng tôi mang đến sự chăm sóc
+                    tận tâm để bạn tận hưởng những phút giây thư giãn tuyệt vời nhất."</div>
+            </div>
+        </div>
+        <div data-layer="Card" class="Card"
+            style="width: 1301.90px; height: 449.83px; position: relative; background: #FFFCFC; box-shadow: 0px 40px 10px rgba(223, 191, 168, 0.10)">
+            <div data-layer="Text" class="Text"
+                style="width: 972px; height: 329px; left: 330.96px; top: 124.39px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 20px; display: inline-flex">
+                <div data-layer="Frame 254" class="Frame254"
+                    style="justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
+                    <div data-layer="Lê Thị Lý" class="LThL"
+                        style="width: 255px; height: 52px; justify-content: center; display: flex; flex-direction: column; color: #6B0606; font-size: 60px; font-family: Inter; font-weight: 500; line-height: 20px; word-wrap: break-word">
+                        Lê Thị Lý</div>
+                    <div data-layer="Khách hàng hài lòng" class="KhChHNgHILNg"
+                        style="width: 192px; height: 52px; justify-content: flex-end; display: flex; flex-direction: column; color: rgba(0, 0, 0, 0.50); font-size: 20px; font-family: Inter; font-weight: 400; line-height: 20px; word-wrap: break-word">
+                        Khách hàng hài lòng</div>
+                </div>
+                <div data-layer="" Tại Lumiare Beauty, tôi đã có những trải nghiệm thật sự tuyệt vời. Chất lượng dịch vụ
+                    và sự tận tâm của đội ngũ nhân viên đã mang lại sự hài lòng tuyệt đối. Đây chắc chắn là điểm đến lý
+                    tưởng để chăm sóc vẻ đẹp và thư giãn tâm hồn...""
+                    class="TILumiareBeautyTICNhNgTrINghiMThTSTuyTVIChTLNgDChVVSTNTMCAINgNhNViNMangLISHILNgTuyTIYChCChNLIMNLTNgChMSCVPVThGiNTMHN"
+                    style="width: 972px; height: 289px; color: black; font-size: 30px; font-family: Inter; font-weight: 400; line-height: 40px; word-wrap: break-word">
+                    "Tại Lumiare Beauty, tôi đã có những trải nghiệm thật sự tuyệt vời. Chất lượng dịch vụ và sự tận tâm
+                    của đội ngũ nhân viên đã mang lại sự hài lòng tuyệt đối. Đây chắc chắn là điểm đến lý tưởng để chăm
+                    sóc vẻ đẹp và thư giãn tâm hồn..."</div>
+            </div>
+            <div data-layer="Line 1" class="Line1"
+                style="width: 80px; height: 0px; left: 226px; top: 187px; position: absolute; outline: 2px #DFBFA8 solid; outline-offset: -1px">
+            </div>
+            <div data-svg-wrapper data-layer="Ellipse 4" class="Ellipse4"
+                style="left: 220px; top: 182px; position: absolute">
+                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="4" cy="4" r="4" fill="#DFBFA8" />
+                </svg>
+            </div>
+            <img data-layer="Ellipse 33" class="Ellipse33"
+                style="width: 123px; height: 108px; left: 159.95px; top: 28px; position: absolute; border-radius: 9999px"
+                src="assets/home2_img_430c57d4.png" />
+            <div data-svg-wrapper data-layer="Ellipse 34" class="Ellipse34"
+                style="left: 87.95px; top: 124.50px; position: absolute">
+                <svg width="123" height="108" viewBox="0 0 123 108" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                        d="M123 54C123 83.8234 95.4655 108 61.5 108C27.5345 108 0 83.8234 0 54C0 24.1766 27.5345 0 61.5 0C95.4655 0 123 24.1766 123 54Z"
+                        fill="url(#pattern0_356_1380)" />
+                    <defs>
+                        <pattern id="pattern0_356_1380" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_356_1380"
+                                transform="matrix(0.000822914 0 0 0.000937207 -0.158331 0)" />
+                        </pattern>
+                        <image id="image0_356_1380" width="1600" height="1067" preserveAspectRatio="none"
+                            xlink:href="assets/home2_img_ff9499fb.png" />
+                    </defs>
+                </svg>
+            </div>
+            <div data-svg-wrapper data-layer="Ellipse 35" class="Ellipse35"
+                style="left: 163.95px; top: 245px; position: absolute">
+                <svg width="123" height="108" viewBox="0 0 123 108" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                        d="M123 54C123 83.8234 95.4655 108 61.5 108C27.5345 108 0 83.8234 0 54C0 24.1766 27.5345 0 61.5 0C95.4655 0 123 24.1766 123 54Z"
+                        fill="url(#pattern0_356_1382)" />
+                    <defs>
+                        <pattern id="pattern0_356_1382" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_356_1382"
+                                transform="matrix(0.00146341 0 0 0.00166667 -0.158537 0)" />
+                        </pattern>
+                        <image id="image0_356_1382" width="900" height="600" preserveAspectRatio="none"
+                            xlink:href="assets/home2_img_f9266d48.png" />
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div data-layer="Video+info block" class="VideoInfoBlock"
+        style="align-self: stretch; height: 1060px; padding-top: 60px; padding-bottom: 60px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+        <div data-layer="Video" class="Video"
+            style="align-self: stretch; height: 696px; position: relative; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: flex">
+            <video id="spa-video" poster="assets/home2_img_2e55006d.png"
+                style="width: 100%; height: 100%; object-fit: cover;">
+                <source src="https://videos.pexels.com/video-files/3998263/3998263-hd_1366_720_50fps.mp4"
+                    type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div id="video-play-btn" data-layer="button" class="Button"
+                style="width: 84px; height: 84px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); cursor: pointer;"
+                onclick="document.getElementById('spa-video').play(); document.getElementById('spa-video').controls = true; this.style.display = 'none';">
+                <div data-svg-wrapper data-layer="back" class="Back" style="left: 0px; top: 0px; position: absolute">
+                    <svg width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0 42C0 18.804 18.804 0 42 0C65.196 0 84 18.804 84 42C84 65.196 65.196 84 42 84C18.804 84 0 65.196 0 42Z"
+                            fill="white" />
+                    </svg>
+                </div>
+                <div data-svg-wrapper data-layer="Fill-2" class="Fill2"
+                    style="left: 33.25px; top: 28px; position: absolute">
+                    <svg width="23" height="30" viewBox="0 0 23 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 29.75V0L22.75 14.8756L0 29.75Z" fill="#DFBFA8" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div data-layer="Info block" class="InfoBlock"
+            style="align-self: stretch; padding-top: 60px; padding-bottom: 60px; padding-left: 182px; padding-right: 160px; background: #F3E2D5; justify-content: space-between; align-items: flex-start; display: inline-flex">
+            <div data-layer="Professional Care" class="ProfessionalCare"
+                style="flex-direction: column; justify-content: flex-start; align-items: center; gap: 1px; display: inline-flex">
+                <div data-svg-wrapper data-layer="Vector" class="Vector">
+                    <svg width="48" height="51" viewBox="0 0 48 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M46.8571 16H45.6831C45.6608 15.5774 45.627 15.1536 45.5802 14.7315C45.511 14.1043 44.9463 13.6518 44.3187 13.7211C43.6914 13.7904 43.239 14.3553 43.3083 14.9826C43.3458 15.3211 43.3737 15.661 43.3937 15.9999H41.1038C40.5136 7.0784 33.0685 0 24 0C14.9315 0 7.4864 7.0784 6.89611 16H4.60617C4.62617 15.661 4.65417 15.3213 4.69154 14.9827C4.76091 14.3554 4.30846 13.7905 3.68114 13.7213C3.05349 13.6522 2.48903 14.1043 2.41966 14.7317C2.37303 15.1536 2.3392 15.5775 2.3168 16.0001H1.14286C0.511657 16.0001 0 16.5118 0 17.143C0 17.7742 0.511657 18.2858 1.14286 18.2858H2.31577C2.86023 28.7346 10.8258 37.2505 21.0286 38.6529V48.2286H12.0736C11.4424 48.2286 10.9307 48.7403 10.9307 49.3714C10.9307 50.0025 11.4424 50.5143 12.0736 50.5143H35.4693C36.1005 50.5143 36.6121 50.0025 36.6121 49.3714C36.6121 48.7403 36.1005 48.2286 35.4693 48.2286H26.9714V38.6529C37.1742 37.2505 45.1398 28.7346 45.6842 18.2857H46.8571C47.4883 18.2857 48 17.7741 48 17.1429C48 16.5117 47.4883 16 46.8571 16ZM24 2.28571C32.1922 2.28571 38.8571 8.95051 38.8571 17.1429C38.8571 25.3352 32.1922 32 24 32C15.8078 32 9.14286 25.3352 9.14286 17.1429C9.14286 8.95051 15.8078 2.28571 24 2.28571ZM24.6857 48.2286H23.3143V38.8453C23.5421 38.8525 23.7705 38.8571 24 38.8571C24.2295 38.8571 24.4579 38.8523 24.6857 38.8453V48.2286ZM25.7137 36.495C25.7127 36.4951 25.7115 36.4951 25.7104 36.4952C25.1466 36.5447 24.5765 36.5714 24 36.5714C23.4235 36.5714 22.8534 36.5447 22.2895 36.4952C22.2883 36.4951 22.2873 36.4951 22.2862 36.495C12.7483 35.6573 5.1664 27.8993 4.60594 18.2857H6.89611C7.4864 27.2073 14.9315 34.2857 24 34.2857C33.0685 34.2857 40.5136 27.2073 41.1039 18.2857H43.3941C42.8335 27.8993 35.2517 35.6573 25.7137 36.495Z"
+                            fill="black" fill-opacity="0.5" />
+                    </svg>
+                </div>
+                <div data-svg-wrapper data-layer="Vector" class="Vector">
+                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0.334814 10.089C0.5579 10.3121 0.850471 10.4238 1.14293 10.4238C1.43539 10.4238 1.72796 10.3121 1.95104 10.089L10.0891 1.95097C10.5354 1.50469 10.5354 0.781029 10.0891 0.334629C9.64281 -0.111543 8.91916 -0.111543 8.47276 0.334629L0.3347 8.47269C-0.111585 8.91909 -0.111586 9.64274 0.334814 10.089Z"
+                            fill="black" fill-opacity="0.5" />
+                    </svg>
+                </div>
+                <div data-svg-wrapper data-layer="Vector" class="Vector">
+                    <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M4.963 0.334671L0.334772 4.96279C-0.111514 5.40907 -0.111629 6.13273 0.334657 6.57913C0.557857 6.80222 0.850315 6.91387 1.14277 6.91387C1.43523 6.91387 1.7278 6.80222 1.95089 6.57913L6.57911 1.95101C7.0254 1.50473 7.02551 0.781071 6.57911 0.334671C6.13294 -0.1115 5.4094 -0.111614 4.963 0.334671Z"
+                            fill="black" fill-opacity="0.5" />
+                    </svg>
+                </div>
+                <div data-svg-wrapper data-layer="Vector" class="Vector">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.3839 0.334629C13.9376 -0.111543 13.2139 -0.111543 12.7675 0.334629L0.334714 12.7675C-0.111571 13.2138 -0.111571 13.9375 0.334714 14.3839C0.557914 14.607 0.850371 14.7186 1.14283 14.7186C1.43529 14.7186 1.72786 14.607 1.95094 14.3839L14.3839 1.95097C14.8301 1.50469 14.8301 0.781029 14.3839 0.334629Z"
+                            fill="black" fill-opacity="0.5" />
+                    </svg>
+                </div>
+                <div data-layer="Text" class="Text"
+                    style="flex-direction: column; justify-content: flex-start; align-items: center; gap: 16px; display: flex">
+                    <div data-layer="Chăm sóc chuyên nghiệp" class="ChMSCChuyNNghiP"
+                        style="text-align: center; color: #6B0606; font-size: 20px; font-family: Inter; font-weight: 600; word-wrap: break-word">
+                        Chăm sóc chuyên nghiệp</div>
+                    <div data-layer="Tận hưởng dịch vụ đẳng cấp từ đội ngũ chuyên gia giàu kinh nghiệm."
+                        class="TNHNgDChVNgCPTINgChuyNGiaGiUKinhNghiM"
+                        style="width: 276px; height: 43px; text-align: center; color: rgba(0, 0, 0, 0.50); font-size: 16px; font-family: Inter; font-weight: 300; word-wrap: break-word">
+                        Tận hưởng dịch vụ đẳng cấp từ đội ngũ chuyên gia giàu kinh nghiệm.</div>
+                </div>
+            </div>
+            <div data-layer="Premium brands" class="PremiumBrands"
+                style="flex-direction: column; justify-content: flex-start; align-items: center; gap: 16px; display: inline-flex">
+                <div data-svg-wrapper data-layer="Icon" class="Icon" style="position: relative">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_179_1364)">
+                            <path
+                                d="M38.4562 1.05978C38.4562 0.474462 37.9817 0 37.3965 0H10.6047C10.0195 0 9.54492 0.474462 9.54492 1.05978V5.56838C9.54492 5.56902 9.54503 5.56955 9.54503 5.57018C9.54503 5.58036 9.5463 5.59064 9.54662 5.60081C9.54747 5.62783 9.54831 5.65475 9.55118 5.68125C9.55128 5.68209 9.55128 5.68305 9.55139 5.6839L12.7024 34.4137V40.1919C12.7024 40.1954 12.7019 40.1987 12.7019 40.2022V44.9792C12.7019 46.6449 14.057 47.9999 15.7227 47.9999H32.2788C33.9445 47.9999 35.2996 46.6448 35.2996 44.9792V40.2022C35.2996 40.1987 35.2991 40.1954 35.2991 40.1919V34.4569L38.4501 5.68368C38.4502 5.68284 38.4501 5.68209 38.4502 5.68125C38.4531 5.65422 38.454 5.62677 38.4549 5.59922C38.4552 5.58947 38.4563 5.57972 38.4563 5.56997C38.4563 5.56944 38.4565 5.56891 38.4565 5.56827V1.05978H38.4562ZM11.6645 2.11955H36.3368V4.5086H11.6645V2.11955ZM33.1793 39.1424H28.3854H19.6158H14.8219V35.4372H33.1794V39.1424H33.1793ZM20.6755 41.2619H27.3256V42.2469H20.6755V41.2619ZM33.1798 44.9792C33.1798 45.4761 32.7756 45.8803 32.2786 45.8803H15.7226C15.2256 45.8803 14.8213 45.476 14.8213 44.9792V41.2619H18.556V42.4669C18.556 43.5143 19.4081 44.3665 20.4555 44.3665H27.5457C28.5931 44.3665 29.4452 43.5144 29.4452 42.4669V41.2619H33.1798V44.9792ZM33.2914 33.3177H14.7143L11.7871 6.62816H36.2143L33.2914 33.3177Z"
+                                fill="black" fill-opacity="0.5" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_179_1364">
+                                <rect width="48" height="48" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <div data-layer="Text" class="Text"
+                    style="flex-direction: column; justify-content: flex-start; align-items: center; gap: 16px; display: flex">
+                    <div data-layer="Thương hiệu cao cấp" class="ThNgHiUCaoCP"
+                        style="text-align: center; color: #6B0606; font-size: 20px; font-family: Inter; font-weight: 600; word-wrap: break-word">
+                        Thương hiệu cao cấp</div>
+                    <div data-layer="Chúng tôi chỉ sử dụng những dòng sản phẩm danh tiếng và chất lượng nhất."
+                        class="ChNgTIChSDNgNhNgDNgSNPhMDanhTiNgVChTLNgNhT"
+                        style="width: 300px; height: 44px; text-align: center; color: rgba(0, 0, 0, 0.50); font-size: 16px; font-family: Inter; font-weight: 300; word-wrap: break-word">
+                        Chúng tôi chỉ sử dụng những dòng sản phẩm danh tiếng và chất lượng nhất.</div>
+                </div>
+            </div>
+            <div data-layer="Natural cosmetic" class="NaturalCosmetic"
+                style="flex-direction: column; justify-content: flex-start; align-items: center; gap: 16px; display: inline-flex">
+                <div data-svg-wrapper data-layer="Icon" class="Icon" style="position: relative">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_179_1370)">
+                            <path
+                                d="M47.8286 15.921C47.5331 15.449 46.937 15.2646 46.4262 15.4865C43.3338 16.833 42.3294 18.7269 40.3281 22.5C39.5128 24.0372 38.498 25.9505 37.0776 28.3531C36.9435 28.5799 36.8022 28.8034 36.6573 29.0255C36.7196 27.0127 36.5524 24.9234 36.1517 22.7759C35.5769 19.695 35.0226 17.3518 34.5771 15.469C33.5536 11.1433 33.1706 9.52458 34.3783 6.95881C34.6154 6.45506 34.4483 5.85357 33.9851 5.54439C33.5221 5.23543 32.9023 5.31158 32.5281 5.72378C30.082 8.41766 29.9412 10.5918 29.6324 15.3557C29.6253 15.4656 29.618 15.5773 29.6107 15.6903C29.1466 14.1992 28.6785 12.7329 28.236 11.3474C26.8901 7.13235 25.7277 3.49215 25.3321 1.30585C25.2353 0.770606 24.7694 0.381348 24.2254 0.381348C23.6815 0.381348 23.2156 0.770606 23.1187 1.30585C22.7232 3.49226 21.5607 7.13258 20.2149 11.3476C19.6519 13.1109 19.0512 14.9924 18.4694 16.8908C18.4318 16.3471 18.3987 15.8363 18.3675 15.3557C18.0587 10.5919 17.9179 8.41766 15.4718 5.72378C15.0974 5.31169 14.478 5.23543 14.0148 5.54439C13.5516 5.85357 13.3845 6.45506 13.6216 6.95881C14.8293 9.5247 14.4463 11.1433 13.4228 15.469C12.9774 17.3518 12.423 19.695 11.8482 22.7759C11.4476 24.9234 11.2804 27.0129 11.3427 29.0255C11.1979 28.8035 11.0565 28.5799 10.9224 28.3531C9.50202 25.9505 8.48731 24.0372 7.67191 22.5C5.67062 18.7268 4.66604 16.8329 1.57379 15.4865C1.06329 15.2643 0.466974 15.4489 0.171403 15.921C-0.124055 16.3929 -0.0295803 17.0101 0.393419 17.3721C2.3468 19.0441 2.61301 20.4236 3.40322 24.5186C3.73996 26.2637 4.15902 28.4354 4.83924 31.2332C6.10318 36.4318 8.62857 40.7152 12.1424 43.6205C15.2606 46.1986 19.0888 47.6186 22.9219 47.6186C23.2815 47.6186 23.6432 47.6042 23.9999 47.579C24.3564 47.6041 24.7181 47.6185 25.0779 47.6186C25.0783 47.6186 25.0783 47.6186 25.0788 47.6186C28.9114 47.6186 32.7396 46.1986 35.8575 43.6206C39.3713 40.7153 41.8967 36.4319 43.1606 31.2332C43.8409 28.4354 44.2599 26.2636 44.5967 24.5186C45.3869 20.4236 45.6531 19.0441 47.6065 17.3721C48.0296 17.0101 48.1241 16.393 47.8286 15.921ZM31.9654 14.1723C32.0918 14.734 32.2341 15.3355 32.3882 15.987C32.8282 17.8465 33.3757 20.1605 33.9405 23.1884C34.5425 26.4152 34.5789 29.4854 34.0526 32.3208C32.7595 33.7311 31.3359 35.0687 29.9361 36.3818C28.4693 37.7579 27.0375 39.102 25.8477 40.4647C26.4251 38.0882 27.2814 35.9243 28.1655 33.6904C29.4556 30.431 30.7896 27.0605 31.2558 22.8764C31.2919 22.5521 31.3256 22.2371 31.3577 21.9278C31.3582 21.9246 31.3583 21.9215 31.3587 21.9184C31.6307 19.2998 31.7662 17.2127 31.8772 15.501C31.9078 15.0283 31.9364 14.5864 31.9654 14.1723ZM22.3577 12.0318C23.0536 9.85221 23.7013 7.82382 24.2254 6.04972C24.7497 7.82359 25.3973 9.85198 26.0931 12.0314C27.0807 15.124 28.1966 18.6202 29.1015 21.8746C29.0755 22.1213 29.0487 22.371 29.0201 22.6272C28.5873 26.5124 27.3664 29.597 26.0739 32.8625C25.3366 34.7253 24.5876 36.6177 23.9998 38.67C23.4121 36.6178 22.663 34.7253 21.9258 32.8625C20.6796 29.7141 19.5023 26.7317 19.0314 23.0401C19.9885 19.4518 21.2469 15.5103 22.3577 12.0318ZM14.0595 23.1884C14.6243 20.1605 15.172 17.8465 15.6118 15.987C15.766 15.3355 15.9083 14.734 16.0346 14.1723C16.0635 14.5865 16.0922 15.0283 16.1228 15.5011C16.2469 17.4168 16.4015 19.8008 16.7441 22.8766C17.2103 27.0607 18.5443 30.4312 19.8344 33.6905C20.7185 35.9244 21.5748 38.0883 22.1522 40.4648C20.9624 39.1021 19.5306 37.758 18.0638 36.3819C16.664 35.0687 15.2403 33.7312 13.9473 32.3209C13.4211 29.4854 13.4575 26.4152 14.0595 23.1884ZM7.02498 30.7019C6.35747 27.9564 5.94403 25.8139 5.61191 24.0925C5.54026 23.7211 5.47177 23.3662 5.40463 23.0264C5.49505 23.1964 5.5884 23.3722 5.68468 23.5538C6.51088 25.1117 7.53908 27.0502 8.98589 29.4977C9.8338 30.932 10.8857 32.2762 12.0218 33.5424C12.0533 33.5819 12.0871 33.6192 12.1235 33.6539C13.5426 35.223 15.0858 36.6723 16.5247 38.0223C19.2435 40.5727 21.8329 43.0016 22.6487 45.3661C16.9937 45.245 9.61527 41.3554 7.02498 30.7019ZM42.3881 24.0926C42.0559 25.814 41.6425 27.9564 40.975 30.702C38.3845 41.3566 31.0064 45.2458 25.3512 45.3664C26.167 43.0019 28.7564 40.5729 31.4751 38.0225C32.9143 36.6724 34.4577 35.2228 35.877 33.6535C35.9131 33.619 35.9466 33.582 35.978 33.5429C37.1142 32.2767 38.1661 30.9323 39.0141 29.4979C40.4609 27.0504 41.4891 25.1119 42.3154 23.5541C42.4117 23.3724 42.5051 23.1965 42.5955 23.0266C42.5282 23.3664 42.4597 23.7212 42.3881 24.0926Z"
+                                fill="black" fill-opacity="0.5" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_179_1370">
+                                <rect width="48" height="48" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <div data-layer="Text" class="Text"
+                    style="flex-direction: column; justify-content: flex-start; align-items: center; gap: 16px; display: flex">
+                    <div data-layer="Mỹ phẩm thiên nhiên" class="MPhMThiNNhiN"
+                        style="text-align: center; color: #6B0606; font-size: 20px; font-family: Inter; font-weight: 600; word-wrap: break-word">
+                        Mỹ phẩm thiên nhiên</div>
+                    <div data-layer="An toàn và lành tính với các chiết xuất hoàn toàn từ thảo mộc tự nhiên."
+                        class="AnToNVLNhTNhVICCChiTXuTHoNToNTThOMCTNhiN"
+                        style="width: 282px; height: 80px; text-align: center; color: rgba(0, 0, 0, 0.50); font-size: 16px; font-family: Inter; font-weight: 300; word-wrap: break-word">
+                        An toàn và lành tính với các chiết xuất hoàn toàn từ thảo mộc tự nhiên.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-layer="Our shop" class="OurShop"
+        style="align-self: stretch; height: 873px; padding-left: 72px; padding-right: 72px; padding-top: 60px; padding-bottom: 60px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
+        <div data-layer="Text" class="Text"
+            style="flex-direction: column; justify-content: flex-start; align-items: center; gap: 20px; display: flex">
+            <div data-layer="Cửa hàng của chúng tôi" class="CAHNgCAChNgTI"
+                style="width: 667px; text-align: center; color: #6B0606; font-size: 32px; font-family: Agbalumo; font-weight: 400; word-wrap: break-word">
+                Cửa hàng của chúng tôi</div>
+            <div data-layer="" Sự tinh tế bắt nguồn từ những giá trị thuần khiết nhất. Những liệu trình của chúng tôi
+                được thiết kế tỉ mỉ để nuôi dưỡng vẻ đẹp từ sâu bên trong, mang lại sự cân bằng hoàn hảo cho tâm hồn và
+                diện mạo. Tại đây, mỗi trải nghiệm đều là một hành trình tận hưởng sự thư thái và tái tạo năng lượng
+                tuyệt vời.""
+                class="STinhTBTNguNTNhNgGiTrThuNKhiTNhTNhNgLiUTrNhCAChNgTICThiTKTMNuIDNgVPTSUBNTrongMangLISCNBNgHoNHOChoTMHNVDiNMOTIYMITrINghiMULMTHNhTrNhTNHNgSThThIVTITONNgLNgTuyTVI"
+                style="width: 668px; height: 99px; text-align: center; color: rgba(0, 0, 0, 0.50); font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+                "Sự tinh tế bắt nguồn từ những giá trị thuần khiết nhất. Những liệu trình của chúng tôi được thiết kế tỉ
+                mỉ để nuôi dưỡng vẻ đẹp từ sâu bên trong, mang lại sự cân bằng hoàn hảo cho tâm hồn và diện mạo. Tại
+                đây, mỗi trải nghiệm đều là một hành trình tận hưởng sự thư thái và tái tạo năng lượng tuyệt vời."</div>
+            <div data-layer="Frame 148" class="Frame148" style="width: 667px; height: 59px"></div>
+        </div>
+        <div data-layer="Cards" class="Cards"
+            style="width: 1296px; height: 413px; justify-content: flex-start; align-items: flex-start; gap: 24px; display: inline-flex">
+            <div data-layer="Card1" class="Card1"
+                style="width: 306px; height: 413px; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+                <img data-layer="Img" class="Img" style="width: 306px; height: 320px; position: relative"
+                    src="assets/home2_img_8a65e8ed.png" />
+                <div data-layer="Text+labels" class="TextLabels"
+                    style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: center; gap: 13px; display: flex">
+                    <div data-layer="Night cream" class="NightCream"
+                        style="text-align: center; color: black; font-size: 20px; font-family: Inter; font-weight: 600; word-wrap: break-word">
+                        Nước hoa hồng</div>
+                    <div data-layer="$20 / 50ml" class="2050ml"
+                        style="text-align: center; color: rgba(0, 0, 0, 0.50); font-size: 16px; font-family: Inter; font-weight: 600; word-wrap: break-word">
+                        510.000 VNĐ / 50ml</div>
+                    <div data-layer="Component 2" data-property-1="Labels 2" class="Component2"
+                        style="justify-content: flex-start; align-items: flex-start; gap: 8px; display: inline-flex">
+                        <div data-layer="50 ml" class="Ml"
+                            style="height: 24px; padding-left: 12px; padding-right: 12px; padding-top: 6px; padding-bottom: 6px; background: #6B0606; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+                            <div data-layer="50 ml" class="Ml"
+                                style="color: white; font-size: 12px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                                50 ml</div>
+                        </div>
+                        <div data-layer="75 ml" class="Ml"
+                            style="height: 24px; padding-left: 12px; padding-right: 12px; padding-top: 6px; padding-bottom: 6px; background: #6B0606; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+                            <div data-layer="75 ml" class="Ml"
+                                style="color: white; font-size: 12px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                                75 ml</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-layer="Card2" class="Card2"
+                style="width: 306px; height: 413px; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+                <img data-layer="Img" class="Img" style="width: 306px; height: 320px; position: relative"
+                    src="assets/home2_img_0ee79108.png" />
+                <div data-layer="Text+labels" class="TextLabels"
+                    style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: center; gap: 13px; display: flex">
+                    <div data-layer="Night cream" class="NightCream"
+                        style="text-align: center; color: black; font-size: 20px; font-family: Inter; font-weight: 600; word-wrap: break-word">
+                        Kem dưỡng ban đêm</div>
+                    <div data-layer="$20 / 50ml" class="2050ml"
+                        style="text-align: center; color: rgba(0, 0, 0, 0.50); font-size: 16px; font-family: Inter; font-weight: 600; word-wrap: break-word">
+                        815.000 VNĐ / 50ml</div>
+                    <div data-layer="Component 2" data-property-1="Labels 2" class="Component2"
+                        style="justify-content: flex-start; align-items: flex-start; gap: 8px; display: inline-flex">
+                        <div data-layer="50 ml" class="Ml"
+                            style="height: 24px; padding-left: 12px; padding-right: 12px; padding-top: 6px; padding-bottom: 6px; background: #6B0606; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+                            <div data-layer="50 ml" class="Ml"
+                                style="color: white; font-size: 12px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                                50 ml</div>
+                        </div>
+                        <div data-layer="75 ml" class="Ml"
+                            style="height: 24px; padding-left: 12px; padding-right: 12px; padding-top: 6px; padding-bottom: 6px; background: #6B0606; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+                            <div data-layer="75 ml" class="Ml"
+                                style="color: white; font-size: 12px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                                75 ml</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-layer="Card3" class="Card3"
+                style="width: 306px; height: 413px; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+                <img data-layer="Img" class="Img" style="width: 306px; height: 320px; position: relative"
+                    src="assets/home2_img_ebd90a91.png" />
+                <div data-layer="Text+labels" class="TextLabels"
+                    style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: center; gap: 13px; display: flex">
+                    <div data-layer="Night cream" class="NightCream"
+                        style="text-align: center; color: black; font-size: 20px; font-family: Inter; font-weight: 600; word-wrap: break-word">
+                        Kem lót trang điểm</div>
+                    <div data-layer="$20 / 50ml" class="2050ml"
+                        style="text-align: center; color: rgba(0, 0, 0, 0.50); font-size: 16px; font-family: Inter; font-weight: 600; word-wrap: break-word">
+                        610.000 VNĐ / 50ml</div>
+                    <div data-layer="Component 2" data-property-1="Labels 2" class="Component2"
+                        style="justify-content: flex-start; align-items: flex-start; gap: 8px; display: inline-flex">
+                        <div data-layer="50 ml" class="Ml"
+                            style="height: 24px; padding-left: 12px; padding-right: 12px; padding-top: 6px; padding-bottom: 6px; background: #6B0606; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+                            <div data-layer="50 ml" class="Ml"
+                                style="color: white; font-size: 12px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                                50 ml</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-layer="Card4" class="Card4"
+                style="width: 306px; height: 413px; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+                <img data-layer="Img" class="Img" style="width: 306px; height: 320px; position: relative"
+                    src="assets/home2_img_479d20c9.png" />
+                <div data-layer="Text+labels" class="TextLabels"
+                    style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: center; gap: 13px; display: flex">
+                    <div data-layer="Night cream" class="NightCream"
+                        style="text-align: center; color: black; font-size: 20px; font-family: Inter; font-weight: 600; word-wrap: break-word">
+                        Cọ trang điểm</div>
+                    <div data-layer="$20 / 50ml" class="2050ml"
+                        style="text-align: center; color: rgba(0, 0, 0, 0.50); font-size: 16px; font-family: Inter; font-weight: 600; word-wrap: break-word">
+                        510.000 VNĐ</div>
+                    <div data-layer="Component 2" data-property-1="Labels 2" class="Component2"
+                        style="justify-content: flex-start; align-items: flex-start; gap: 8px; display: inline-flex">
+                        <div data-layer="50 ml" class="Ml"
+                            style="height: 24px; padding-left: 12px; padding-right: 12px; padding-top: 6px; padding-bottom: 6px; background: #6B0606; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+                            <div data-layer="50 ml" class="Ml"
+                                style="color: white; font-size: 12px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                                50 ml</div>
+                        </div>
+                        <div data-layer="75 ml" class="Ml"
+                            style="height: 24px; padding-left: 12px; padding-right: 12px; padding-top: 6px; padding-bottom: 6px; background: #6B0606; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+                            <div data-layer="75 ml" class="Ml"
+                                style="color: white; font-size: 12px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                                75 ml</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-layer="Follow our Instagram" class="FollowOurInstagram"
+        style="align-self: stretch; padding-top: 60px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 40px; display: flex">
+        <div data-layer="Text" class="Text"
+            style="flex-direction: column; justify-content: flex-start; align-items: center; gap: 24px; display: flex">
+            <div data-layer="Theo dõi chúng tôi trên Instagram." class="TheoDIChNgTITrNInstagram"
+                style="width: 844px; text-align: center; color: #6B0606; font-size: 32px; font-family: Agbalumo; font-weight: 400; word-wrap: break-word">
+                Theo dõi chúng tôi trên Instagram.</div>
+            <div data-layer="" Một không gian yên bình, nơi mọi lo toan nhường chỗ cho sự thư thái tuyệt đối. Chúng tôi
+                nâng niu vẻ đẹp của bạn bằng sự tận tâm, mang đến những trải nghiệm tinh tế để nuôi dưỡng cơ thể và làm
+                mới tâm hồn mỗi ngày.""
+                class="MTKhNgGianYNBNhNIMILoToanNhNgChChoSThThITuyTIChNgTINNgNiuVPCABNBNgSTNTMMangNNhNgTrINghiMTinhTNuIDNgCThVLMMITMHNMINgY"
+                style="width: 876px; text-align: center; color: rgba(0, 0, 0, 0.50); font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+                "Một không gian yên bình, nơi mọi lo toan nhường chỗ cho sự thư thái tuyệt đối. Chúng tôi nâng niu vẻ
+                đẹp của bạn bằng sự tận tâm, mang đến những trải nghiệm tinh tế để nuôi dưỡng cơ thể và làm mới tâm hồn
+                mỗi ngày."</div>
+        </div>
+        <div data-layer="Imgs" class="Imgs"
+            style="width: 1440px; justify-content: flex-start; align-items: flex-start; display: inline-flex; flex-wrap: wrap; align-content: flex-start">
+            <img data-layer="Img" class="Img" style="width: 288px; height: 288px; position: relative"
+                src="assets/home2_img_6294a778.png" />
+            <img data-layer="Img" class="Img" style="width: 288px; height: 288px; position: relative"
+                src="assets/home2_img_8f97ef0d.png" />
+            <img data-layer="Img" class="Img" style="width: 288px; height: 288px; position: relative"
+                src="assets/home2_img_1bbb4411.png" />
+            <img data-layer="Img" class="Img" style="width: 288px; height: 288px; position: relative"
+                src="assets/home2_img_237bf5ca.png" />
+            <img data-layer="Img" class="Img" style="width: 288px; height: 288px; position: relative"
+                src="assets/home2_img_4cbf2c9b.png" />
+            <img data-layer="Img" class="Img" style="width: 288px; height: 288px; position: relative"
+                src="assets/home2_img_ad20aedd.png" />
+            <img data-layer="Img" class="Img" style="width: 288px; height: 288px; position: relative"
+                src="assets/home2_img_6c43a1ea.png" />
+            <img data-layer="Img" class="Img" style="width: 288px; height: 288px; position: relative"
+                src="assets/home2_img_0ac2d101.png" />
+            <img data-layer="Img" class="Img" style="width: 288px; height: 288px; position: relative"
+                src="assets/home2_img_a9e2330d.png" />
+            <img data-layer="Img" class="Img" style="width: 288px; height: 288px; position: relative"
+                src="assets/home2_img_81c26361.png" />
+        </div>
+        <div data-layer="Footer" class="Footer" style="width: 1918px; height: 302px; position: relative">
+            <div data-layer="Rectangle 33" class="Rectangle33"
+                style="width: 2012px; height: 302px; left: -94px; top: 0.17px; position: absolute; background: #DFBFA8">
+            </div>
+            <div data-layer="Lumirea Beauty không chỉ là nơi chăm sóc nhan sắc, mà còn là không gian để bạn tìm lại sự cân bằng trong cuộc sống. Chúng tôi cam kết sử dụng những công nghệ tiên tiến nhất cùng sự tận tâm tuyệt đối để mang lại cho bạn vẻ đẹp tự nhiên và sự tự tin rạng ngời."
+                class="LumireaBeautyKhNgChLNIChMSCNhanSCMCNLKhNgGianBNTMLISCNBNgTrongCuCSNgChNgTICamKTSDNgNhNgCNgNghTiNTiNNhTCNgSTNTMTuyTIMangLIChoBNVPTNhiNVSTTinRNgNgI"
+                style="width: 495px; height: 112.22px; left: 39px; top: 85.54px; position: absolute; color: black; font-size: 16px; font-family: Jost; font-weight: 400; word-wrap: break-word">
+                Lumirea Beauty không chỉ là nơi chăm sóc nhan sắc, mà còn là không gian để bạn tìm lại sự cân bằng trong
+                cuộc sống. Chúng tôi cam kết sử dụng những công nghệ tiên tiến nhất cùng sự tận tâm tuyệt đối để mang
+                lại cho bạn vẻ đẹp tự nhiên và sự tự tin rạng ngời.</div>
+            <div data-layer="Trang chủ Dịch vụ Đặt lịch Blog Liên hệ" class="TrangChDChVTLChBlogLiNH"
+                style="width: 122px; height: 165.85px; left: 673px; top: 31.91px; position: absolute; color: black; font-size: 20px; font-family: Jost; font-weight: 600; word-wrap: break-word">
+                Trang chủ<br />Dịch vụ
+                <br />Đặt lịch<br />Blog<br />Liên hệ<br />
+            </div>
+            <div data-layer="Liên hệ" class="LiNH"
+                style="width: 123.77px; height: 23.93px; left: 1353.35px; top: 31.08px; position: absolute; color: black; font-size: 20px; font-family: Jost; font-weight: 700; word-wrap: break-word">
+                Liên hệ</div>
+            <div data-layer="90 Hà Đông - Hà Nội contact.Lumireabeuty@gmail.com Số điện thoại: (+086)456.999.77"
+                class="HNgHNIContactLumireabeutyGmailComSINThoI08645699977"
+                style="width: 258px; height: 118.82px; left: 1353px; top: 64.09px; position: absolute; color: black; font-size: 16px; font-family: Jost; font-weight: 400; word-wrap: break-word">
+                90 Hà Đông - Hà Nội
+                <br />contact.Lumireabeuty@gmail.com
+                <br />Số điện thoại: (+086)456.999.77
+            </div>
+            <div data-layer="Thời gian làm việc" class="ThIGianLMViC"
+                style="width: 176.99px; height: 23.93px; left: 920.15px; top: 31.08px; position: absolute; color: black; font-size: 20px; font-family: Jost; font-weight: 700; word-wrap: break-word">
+                Thời gian làm việc</div>
+            <div data-layer="Thứ 2 - Thứ 6: 7h - 22h Thứ 7 - Chủ nhật: 6:30 – 23h" class="Th2Th67h22hTh7ChNhT63023h"
+                style="width: 273px; height: 58.58px; left: 920px; top: 78.11px; position: absolute; color: black; font-size: 20px; font-family: Jost; font-weight: 400; word-wrap: break-word">
+                Thứ 2 - Thứ 6: 7h - 22h <br />Thứ 7 - Chủ nhật: 6:30 – 23h
+                <br /><br />
+            </div>
+            <div data-layer="Frame 512" class="Frame512"
+                style="width: 395.97px; height: 29.53px; left: 39px; top: 37px; position: absolute">
+                <div data-svg-wrapper data-layer="1" style="left: 0px; top: 0px; position: absolute">
+                    <svg width="396" height="30" viewBox="0 0 396 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 29.0909V0H5.26989V24.6733H18.0824V29.0909H0Z" fill="url(#paint0_linear_355_1367)" />
+                        <path
+                            d="M40.9943 0H46.2642V19.0057C46.2642 21.089 45.7718 22.9214 44.7869 24.5028C43.8116 26.0843 42.4384 27.3201 40.6676 28.2102C38.8968 29.0909 36.8277 29.5312 34.4602 29.5312C32.0833 29.5312 30.0095 29.0909 28.2386 28.2102C26.4678 27.3201 25.0947 26.0843 24.1193 24.5028C23.1439 22.9214 22.6562 21.089 22.6562 19.0057V0H27.9261V18.5653C27.9261 19.7775 28.1913 20.857 28.7216 21.804C29.2614 22.7509 30.0189 23.4943 30.9943 24.0341C31.9697 24.5644 33.125 24.8295 34.4602 24.8295C35.7955 24.8295 36.9508 24.5644 37.9261 24.0341C38.911 23.4943 39.6686 22.7509 40.1989 21.804C40.7292 20.857 40.9943 19.7775 40.9943 18.5653V0Z"
+                            fill="url(#paint1_linear_355_1367)" />
+                        <path
+                            d="M51.9922 0H58.4411L67.0774 21.0795H67.4183L76.0547 0H82.5036V29.0909H77.4467V9.10511H77.1768L69.1371 29.0057H65.3587L57.3189 9.0625H57.049V29.0909H51.9922V0Z"
+                            fill="url(#paint2_linear_355_1367)" />
+                        <path d="M93.5121 0V29.0909H88.2422V0H93.5121Z" fill="url(#paint3_linear_355_1367)" />
+                        <path
+                            d="M99.2188 29.0909V0H118.139V4.41761H104.489V12.3153H117.159V16.733H104.489V24.6733H118.253V29.0909H99.2188Z"
+                            fill="url(#paint4_linear_355_1367)" />
+                        <path
+                            d="M123.516 29.0909V0H134.425C136.66 0 138.535 0.388258 140.05 1.16477C141.574 1.94129 142.725 3.0303 143.501 4.43182C144.287 5.82386 144.68 7.44792 144.68 9.30398C144.68 11.1695 144.283 12.7888 143.487 14.1619C142.701 15.5256 141.541 16.5814 140.007 17.3295C138.473 18.0682 136.589 18.4375 134.354 18.4375H126.584V14.0625H133.643C134.95 14.0625 136.02 13.8826 136.854 13.5227C137.687 13.1534 138.303 12.6184 138.7 11.9176C139.107 11.2074 139.311 10.3362 139.311 9.30398C139.311 8.27178 139.107 7.3911 138.7 6.66193C138.293 5.9233 137.673 5.36458 136.839 4.9858C136.006 4.59754 134.931 4.40341 133.615 4.40341H128.786V29.0909H123.516ZM138.544 15.9091L145.746 29.0909H139.865L132.791 15.9091H138.544Z"
+                            fill="url(#paint5_linear_355_1367)" />
+                        <path
+                            d="M153.267 29.0909H147.642L157.884 0H164.389L174.645 29.0909H169.02L161.25 5.96591H161.023L153.267 29.0909ZM153.452 17.6847H168.793V21.9176H153.452V17.6847Z"
+                            fill="url(#paint6_linear_355_1367)" />
+                        <path
+                            d="M188.398 29.0909V0H199.535C201.637 0 203.384 0.331439 204.776 0.994318C206.178 1.64773 207.224 2.54261 207.915 3.67898C208.616 4.81534 208.967 6.10322 208.967 7.54261C208.967 8.72633 208.739 9.73958 208.285 10.5824C207.83 11.4157 207.219 12.0928 206.452 12.6136C205.685 13.1345 204.828 13.5085 203.881 13.7358V14.0199C204.914 14.0767 205.903 14.3939 206.85 14.9716C207.807 15.5398 208.588 16.3447 209.194 17.3864C209.8 18.428 210.103 19.6875 210.103 21.1648C210.103 22.6705 209.738 24.0246 209.009 25.2273C208.28 26.4205 207.182 27.3627 205.714 28.054C204.246 28.7453 202.399 29.0909 200.174 29.0909H188.398ZM193.668 24.6875H199.336C201.249 24.6875 202.627 24.3229 203.469 23.5938C204.322 22.8551 204.748 21.9081 204.748 20.7528C204.748 19.8911 204.535 19.1146 204.109 18.4233C203.683 17.7225 203.076 17.1733 202.29 16.7756C201.505 16.3684 200.567 16.1648 199.478 16.1648H193.668V24.6875ZM193.668 12.3722H198.881C199.79 12.3722 200.61 12.2064 201.339 11.875C202.068 11.5341 202.641 11.0559 203.058 10.4403C203.484 9.81534 203.697 9.0767 203.697 8.22443C203.697 7.09754 203.299 6.16951 202.504 5.44034C201.718 4.71117 200.548 4.34659 198.995 4.34659H193.668V12.3722Z"
+                            fill="url(#paint7_linear_355_1367)" />
+                        <path
+                            d="M214.688 29.0909V0H233.608V4.41761H219.957V12.3153H232.628V16.733H219.957V24.6733H233.722V29.0909H214.688Z"
+                            fill="url(#paint8_linear_355_1367)" />
+                        <path
+                            d="M242.72 29.0909H237.095L247.337 0H253.842L264.098 29.0909H258.473L250.703 5.96591H250.476L242.72 29.0909ZM242.905 17.6847H258.246V21.9176H242.905V17.6847Z"
+                            fill="url(#paint9_linear_355_1367)" />
+                        <path
+                            d="M286.268 0H291.538V19.0057C291.538 21.089 291.045 22.9214 290.06 24.5028C289.085 26.0843 287.712 27.3201 285.941 28.2102C284.17 29.0909 282.101 29.5312 279.734 29.5312C277.357 29.5312 275.283 29.0909 273.512 28.2102C271.741 27.3201 270.368 26.0843 269.393 24.5028C268.417 22.9214 267.93 21.089 267.93 19.0057V0H273.2V18.5653C273.2 19.7775 273.465 20.857 273.995 21.804C274.535 22.7509 275.292 23.4943 276.268 24.0341C277.243 24.5644 278.398 24.8295 279.734 24.8295C281.069 24.8295 282.224 24.5644 283.2 24.0341C284.184 23.4943 284.942 22.7509 285.472 21.804C286.003 20.857 286.268 19.7775 286.268 18.5653V0Z"
+                            fill="url(#paint10_linear_355_1367)" />
+                        <path d="M295.987 4.41761V0H319.197V4.41761H310.206V29.0909H304.979V4.41761H295.987Z"
+                            fill="url(#paint11_linear_355_1367)" />
+                        <path
+                            d="M321.683 0H327.635L334.751 12.8693H335.036L342.152 0H348.104L337.521 18.2386V29.0909H332.266V18.2386L321.683 0Z"
+                            fill="url(#paint12_linear_355_1367)" />
+
+                        <defs>
+                            <linearGradient id="paint0_linear_355_1367" x1="0" y1="14.7656" x2="395.973" y2="14.7656"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FF6B00" />
+                                <stop offset="0.543269" stop-color="#FFCC5D" />
+                                <stop offset="1" stop-color="#E07629" />
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_355_1367" x1="0" y1="14.7656" x2="395.973" y2="14.7656"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FF6B00" />
+                                <stop offset="0.543269" stop-color="#FFCC5D" />
+                                <stop offset="1" stop-color="#E07629" />
+                            </linearGradient>
+                            <linearGradient id="paint2_linear_355_1367" x1="0" y1="14.7656" x2="395.973" y2="14.7656"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FF6B00" />
+                                <stop offset="0.543269" stop-color="#FFCC5D" />
+                                <stop offset="1" stop-color="#E07629" />
+                            </linearGradient>
+                            <linearGradient id="paint3_linear_355_1367" x1="0" y1="14.7656" x2="395.973" y2="14.7656"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FF6B00" />
+                                <stop offset="0.543269" stop-color="#FFCC5D" />
+                                <stop offset="1" stop-color="#E07629" />
+                            </linearGradient>
+                            <linearGradient id="paint4_linear_355_1367" x1="0" y1="14.7656" x2="395.973" y2="14.7656"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FF6B00" />
+                                <stop offset="0.543269" stop-color="#FFCC5D" />
+                                <stop offset="1" stop-color="#E07629" />
+                            </linearGradient>
+                            <linearGradient id="paint5_linear_355_1367" x1="0" y1="14.7656" x2="395.973" y2="14.7656"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FF6B00" />
+                                <stop offset="0.543269" stop-color="#FFCC5D" />
+                                <stop offset="1" stop-color="#E07629" />
+                            </linearGradient>
+                            <linearGradient id="paint6_linear_355_1367" x1="0" y1="14.7656" x2="395.973" y2="14.7656"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FF6B00" />
+                                <stop offset="0.543269" stop-color="#FFCC5D" />
+                                <stop offset="1" stop-color="#E07629" />
+                            </linearGradient>
+                            <linearGradient id="paint7_linear_355_1367" x1="0" y1="14.7656" x2="395.973" y2="14.7656"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FF6B00" />
+                                <stop offset="0.543269" stop-color="#FFCC5D" />
+                                <stop offset="1" stop-color="#E07629" />
+                            </linearGradient>
+                            <linearGradient id="paint8_linear_355_1367" x1="0" y1="14.7656" x2="395.973" y2="14.7656"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FF6B00" />
+                                <stop offset="0.543269" stop-color="#FFCC5D" />
+                                <stop offset="1" stop-color="#E07629" />
+                            </linearGradient>
+                            <linearGradient id="paint9_linear_355_1367" x1="0" y1="14.7656" x2="395.973" y2="14.7656"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FF6B00" />
+                                <stop offset="0.543269" stop-color="#FFCC5D" />
+                                <stop offset="1" stop-color="#E07629" />
+                            </linearGradient>
+                            <linearGradient id="paint10_linear_355_1367" x1="0" y1="14.7656" x2="395.973" y2="14.7656"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FF6B00" />
+                                <stop offset="0.543269" stop-color="#FFCC5D" />
+                                <stop offset="1" stop-color="#E07629" />
+                            </linearGradient>
+                            <linearGradient id="paint11_linear_355_1367" x1="0" y1="14.7656" x2="395.973" y2="14.7656"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FF6B00" />
+                                <stop offset="0.543269" stop-color="#FFCC5D" />
+                                <stop offset="1" stop-color="#E07629" />
+                            </linearGradient>
+                            <linearGradient id="paint12_linear_355_1367" x1="0" y1="14.7656" x2="395.973" y2="14.7656"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FF6B00" />
+                                <stop offset="0.543269" stop-color="#FFCC5D" />
+                                <stop offset="1" stop-color="#E07629" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

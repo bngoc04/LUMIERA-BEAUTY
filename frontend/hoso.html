@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ sơ Khách hàng - Lumiera Beauty</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Imperial+Script&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .profile-container {
+            max-width: 1400px;
+            margin: 120px auto 50px;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: 280px 1fr 320px;
+            gap: 30px;
+            align-items: start;
+        }
+
+        /* Common Card Style */
+        .glass-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.02);
+        }
+
+        .glass-card:hover {
+            box-shadow: 0 15px 50px rgba(107, 6, 6, 0.08);
+            transform: translateY(-2px);
+        }
+
+        /* LEFT SIDEBAR */
+        .profile-sidebar {
+            padding: 40px 25px;
+            text-align: center;
+            position: sticky;
+            top: 140px;
+        }
+
+        .profile-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            box-shadow: 0 0 0 3px #6B0606;
+            margin: 0 auto 20px;
+            overflow: hidden;
+        }
+
+        .profile-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-name {
+            font-family: 'Abhaya Libre', serif;
+            font-size: 26px;
+            font-weight: 800;
+            color: #111;
+            margin-bottom: 8px;
+        }
+
+        .profile-rank {
+            color: #6B0606;
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: linear-gradient(135deg, #fff1f1 0%, #ffe4e4 100%);
+            padding: 6px 16px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+
+        .profile-menu {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .profile-menu a {
+            padding: 14px 20px;
+            color: #666;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .profile-menu a:hover {
+            background: #fff5f5;
+            color: #6B0606;
+            padding-left: 25px;
+        }
+
+        .profile-menu a.active {
+            background: #6B0606;
+            color: white;
+            box-shadow: 0 8px 20px rgba(107, 6, 6, 0.2);
+        }
+
+        .profile-menu a.active:hover {
+            padding-left: 20px;
+            /* Reset padding for active */
+        }
+
+        /* CENTER CONTENT */
+        .profile-content {
+            min-height: 500px;
+        }
+
+        .content-card {
+            padding: 40px;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 35px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f8f9fa;
+        }
+
+        .card-title {
+            font-family: 'Abhaya Libre', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #111;
+            margin: 0;
+            position: relative;
+        }
+
+        .card-title::after {
+            content: '';
+            position: absolute;
+            bottom: -22px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #6B0606;
+            border-radius: 2px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .info-item {
+            background: #fcfcfc;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #f0f0f0;
+            transition: all 0.2s;
+        }
+
+        .info-item:hover {
+            border-color: #6B0606;
+            background: white;
+        }
+
+        .info-item label {
+            display: block;
+            color: #888;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .info-item div {
+            color: #222;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        /* Table Styling */
+        .history-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 10px;
+        }
+
+        .history-table th {
+            text-align: left;
+            padding: 15px 20px;
+            color: #888;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .history-table td {
+            padding: 20px;
+            background: #fff;
+            color: #333;
+            font-size: 14px;
+            border-top: 1px solid #f9f9f9;
+            border-bottom: 1px solid #f9f9f9;
+        }
+
+        .history-table tr td:first-child {
+            border-left: 1px solid #f9f9f9;
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+        }
+
+        .history-table tr td:last-child {
+            border-right: 1px solid #f9f9f9;
+            border-top-right-radius: 12px;
+            border-bottom-right-radius: 12px;
+        }
+
+        .history-table tr:hover td {
+            background: #fafafa;
+            transform: scale(1.01);
+            transition: all 0.2s;
+        }
+
+        /* RIGHT NOTIFICATIONS */
+        .notifications-panel {
+            position: sticky;
+            top: 140px;
+        }
+
+        .notif-header {
+            font-family: 'Abhaya Libre', serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .notification-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .notification-card {
+            background: white;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            border-left: 4px solid #6B0606;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .notification-card:hover {
+            transform: translateX(-5px);
+            box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .notif-icon {
+            margin-bottom: 12px;
+            display: inline-flex;
+            width: 32px;
+            height: 32px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #fff1f1;
+            color: #6B0606;
+            font-size: 14px;
+        }
+
+        .notif-title {
+            font-weight: 700;
+            font-size: 15px;
+            color: #222;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        .notif-desc {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .notif-time {
+            font-size: 11px;
+            color: #999;
+            font-weight: 500;
+            text-align: right;
+            display: block;
+        }
+
+        @media (max-width: 1200px) {
+            .profile-container {
+                grid-template-columns: 260px 1fr;
+            }
+
+            .notifications-panel {
+                display: none;
+                /* Hide toggleable right panel on medium screens if needed, or stack */
+            }
+        }
+
+        @media (max-width: 900px) {
+            .profile-container {
+                grid-template-columns: 1fr;
+                margin-top: 100px;
+            }
+
+            .profile-sidebar {
+                position: static;
+                margin-bottom: 30px;
+            }
+
+            .notifications-panel {
+                position: static;
+                margin-top: 30px;
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header (Same as Homepage) -->
+    <div data-layer="Header" class="Header"
+        style="padding: 20px 72px; justify-content: space-between; align-items: center; display: flex; position: fixed; top: 0; z-index: 1000; background: white; width: 100%; box-sizing: border-box; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+        <img data-layer="image 43" class="Image43" style="width: 150px; height: auto" src="assets/lumiera_logo_new.png"
+            onclick="window.location.href='homepage.html'" style="cursor: pointer;" />
+
+        <div data-layer="Menu" class="Menu" style="display: flex; gap: 40px;">
+            <a href="homepage.html"
+                style="color: #955D34; font-size: 18px; font-family: Inter; font-weight: 400; text-decoration: none;">Home</a>
+            <a href="services.html"
+                style="color: #955D34; font-size: 18px; font-family: Inter; font-weight: 400; text-decoration: none;">Services</a>
+            <a href="lumiera_ai.html"
+                style="color: #955D34; font-size: 18px; font-family: Inter; font-weight: 400; text-decoration: none;">Lumiera
+                AI</a>
+            <a href="about.html"
+                style="color: #955D34; font-size: 18px; font-family: Inter; font-weight: 400; text-decoration: none;">About
+                Us</a>
+            <a href="contact.html"
+                style="color: #955D34; font-size: 18px; font-family: Inter; font-weight: 400; text-decoration: none;">Contact
+                Us</a>
+        </div>
+
+        <div class="user-profile-container" style="position: relative; cursor: pointer; z-index: 1001;">
+            <div class="profile-icon" onclick="toggleProfileMenu(event)">
+                <div
+                    style="width: 40px; height: 40px; border-radius: 50%; background: #6B0606; display: flex; align-items: center; justify-content: center; color: white;">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+            <div id="profile-dropdown" class="profile-dropdown-menu"
+                style="display: none; position: absolute; top: 100%; right: 0; background: white; border: 1px solid #ccc; border-radius: 8px; padding: 10px; width: 180px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); flex-direction: column; gap: 5px; margin-top: 10px;">
+                <a href="hoso.html" class="dropdown-item"
+                    style="display: block; padding: 10px 12px; text-decoration: none; color: #6B0606; font-family: Inter; font-size: 16px; border-radius: 4px; background: #fff1f1;">Hồ
+                    sơ</a>
+                <a href="datlich.html" class="dropdown-item"
+                    style="display: block; padding: 10px 12px; text-decoration: none; color: black; font-family: Inter; font-size: 16px; border-radius: 4px; transition: background 0.2s;">Đặt
+                    lịch</a>
+                <div style="height: 1px; background: #eee; margin: 5px 0;"></div>
+                <a href="đangnhap.html" class="dropdown-item"
+                    style="display: block; padding: 10px 12px; text-decoration: none; color: #d32f2f; font-family: Inter; font-size: 16px; border-radius: 4px; transition: background 0.2s;">Đăng
+                    xuất</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="profile-container">
+        <!-- 1. LEFT SIDEBAR: Navigation -->
+        <div class="profile-sidebar glass-card">
+            <div class="profile-avatar">
+                <img src="assets/home2_img_acb1eaef.png" alt="Avatar">
+            </div>
+            <div class="profile-name" id="sidebar-name">Nguyễn Thị Hương</div>
+            <div class="profile-rank">Thành viên Vàng</div>
+
+            <div class="profile-menu">
+                <a href="#" onclick="showSection('info', this)" class="active"><i class="fa-regular fa-user"></i>
+                    <span>Thông tin cá nhân</span></a>
+                <a href="#" onclick="showSection('history', this)"><i class="fa-solid fa-clock-rotate-left"></i>
+                    <span>Lịch sử đặt hẹn</span></a>
+                <!-- Notifications removed from menu as it is now a permanent panel -->
+                <a href="#" onclick="scrollToNotifications()"><i class="fa-regular fa-bell"></i> <span>Thông
+                        báo</span></a>
+                <a href="#" onclick="logout()" style="color: #dc2626;"><i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Đăng xuất</span></a>
+            </div>
+        </div>
+
+        <!-- 2. CENTER CONTENT: Dynamic -->
+        <div class="profile-content">
+            <!-- Info Card -->
+            <div id="info-section" class="content-card glass-card">
+                <div class="card-header">
+                    <h2 class="card-title">Thông tin cá nhân</h2>
+                    <button id="edit-btn" onclick="toggleEditMode()"
+                        style="border: none; background: #fff1f1; color: #6B0606; padding: 10px 20px; border-radius: 30px; cursor: pointer; font-weight: 600; font-family: 'Inter'; transition: all 0.2s; box-shadow: 0 4px 10px rgba(107,6,6,0.1);">
+                        <i class="fa-solid fa-pen" style="margin-right: 8px;"></i> Chỉnh sửa
+                    </button>
+                </div>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label><i class="fa-regular fa-id-card"></i> Họ và tên</label>
+                        <div id="profile-fullname">Nguyễn Thị Hương</div>
+                    </div>
+                    <div class="info-item">
+                        <label><i class="fa-solid fa-phone"></i> Số điện thoại</label>
+                        <div id="profile-phone">0912 345 678</div>
+                    </div>
+                    <div class="info-item">
+                        <label><i class="fa-regular fa-envelope"></i> Email</label>
+                        <div id="profile-email">huong.nguyen@email.com</div>
+                    </div>
+                    <div class="info-item">
+                        <label><i class="fa-solid fa-cake-candles"></i> Ngày sinh</label>
+                        <div id="profile-dob">15/08/1995</div>
+                    </div>
+                    <div class="info-item" style="grid-column: span 2;">
+                        <label><i class="fa-solid fa-location-dot"></i> Địa chỉ</label>
+                        <div id="profile-address">123 Nguyễn Huệ, Quận 1, TP.HCM</div>
+                    </div>
+                    <div class="info-item">
+                        <label><i class="fa-solid fa-star"></i> Điểm tích lũy</label>
+                        <div style="color: #6B0606; font-size: 20px;">1,250 điểm</div>
+                    </div>
+                    <div class="info-item">
+                        <label><i class="fa-solid fa-ranking-star"></i> Hạng thành viên</label>
+                        <div style="color: #bfa15f;">Vàng (Gold)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking History -->
+            <div id="history-section" class="content-card glass-card" style="display: none;">
+                <div class="card-header">
+                    <h2 class="card-title">Lịch hẹn gần đây</h2>
+                    <a href="#"
+                        style="color: #6B0606; text-decoration: none; font-size: 14px; font-weight: 600; background: #fff1f1; padding: 8px 16px; border-radius: 20px;">Xem
+                        tất cả</a>
+                </div>
+                <table class="history-table">
+                    <thead>
+                        <tr>
+                            <th>Dịch vụ</th>
+                            <th>Ngày & Giờ</th>
+                            <th>Trạng thái</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history-table-body">
+                        <!-- Static rows removed, content loaded via JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 3. RIGHT SIDEBAR: Notifications -->
+        <div class="notifications-panel" id="notifications-panel">
+            <div class="notif-header">
+                Thông báo mới
+                <span
+                    style="background: #6B0606; color: white; font-size: 12px; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; border-radius: 50%;">2</span>
+            </div>
+            <div class="notification-list">
+                <div class="notification-card">
+                    <div class="notif-icon"><i class="fa-solid fa-gift"></i></div>
+                    <div class="notif-title">Chúc mừng sinh nhật!</div>
+                    <div class="notif-desc">Lumiera Beauty gửi tặng bạn voucher giảm giá 50% cho dịch vụ bất kỳ.</div>
+                    <span class="notif-time">2 giờ trước</span>
+                </div>
+
+                <div class="notification-card" style="border-left-color: #1f7a26;">
+                    <div class="notif-icon" style="background: #e3f9e5; color: #1f7a26;"><i
+                            class="fa-solid fa-check"></i></div>
+                    <div class="notif-title">Đặt lịch thành công</div>
+                    <div class="notif-desc">Lịch hẹn "Chăm sóc da cơ bản" của bạn đã được xác nhận.</div>
+                    <span class="notif-time">1 ngày trước</span>
+                </div>
+
+                <div class="notification-card" style="border-left-color: #999; opacity: 0.8;">
+                    <div class="notif-icon" style="background: #f0f0f0; color: #666;"><i class="fa-solid fa-tag"></i>
+                    </div>
+                    <div class="notif-title">Khuyến mãi tháng 1</div>
+                    <div class="notif-desc">Giảm 20% cho tất cả các gói liệu trình chăm sóc da.</div>
+                    <span class="notif-time">5 ngày trước</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script>
+        function toggleProfileMenu(event) {
+            event.stopPropagation();
+            const dropdown = document.getElementById('profile-dropdown');
+            if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+                dropdown.style.display = 'flex';
+            } else {
+                dropdown.style.display = 'none';
+            }
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function (event) {
+            const dropdown = document.getElementById('profile-dropdown');
+            const profileIcon = document.querySelector('.profile-icon');
+            if (dropdown && profileIcon && !profileIcon.contains(event.target) && !dropdown.contains(event.target)) {
+                dropdown.style.display = 'none';
+            }
+        });
+
+        function showSection(sectionId, element) {
+            // Hide all main sections (Notifications is now a separate panel)
+            document.getElementById('info-section').style.display = 'none';
+            document.getElementById('history-section').style.display = 'none';
+
+            // Show selected section
+            const section = document.getElementById(sectionId + '-section');
+            if (section) {
+                section.style.display = 'block';
+            }
+
+            // Update menu active state
+            const links = document.querySelectorAll('.profile-menu a');
+            links.forEach(link => link.classList.remove('active'));
+            if (element) {
+                element.classList.add('active');
+            }
+        }
+
+        function scrollToNotifications() {
+            const panel = document.getElementById('notifications-panel');
+            if (panel) {
+                panel.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        let isEditing = false;
+
+        function toggleEditMode() {
+            const btn = document.getElementById('edit-btn');
+            const fields = ['profile-fullname', 'profile-phone', 'profile-dob', 'profile-address'];
+
+            if (!isEditing) {
+                // Switch to Edit Mode
+                fields.forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el) {
+                        const currentVal = el.innerText;
+                        el.setAttribute('data-original', currentVal);
+                        el.innerHTML = `<input type="text" value="${currentVal}" style="width: 100%; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">`;
+                    }
+                });
+                btn.innerHTML = '<i class="fa-solid fa-save" style="margin-right: 8px;"></i> Lưu';
+                btn.style.background = '#6B0606';
+                btn.style.color = 'white';
+                isEditing = true;
+            } else {
+                // Save Changes
+                const userJson = localStorage.getItem('user');
+                let user = userJson ? JSON.parse(userJson) : {};
+
+                fields.forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el) {
+                        const input = el.querySelector('input');
+                        const newVal = input ? input.value : el.getAttribute('data-original');
+                        el.innerHTML = newVal;
+
+                        // Update local storage object keys based on ID
+                        if (id === 'profile-fullname') user.name = newVal;
+                        if (id === 'profile-phone') user.phone = newVal;
+                        // dob and address are not in the minimal mock 'user' object usually, but we can add them
+                        if (id === 'profile-dob') user.dob = newVal;
+                        if (id === 'profile-address') user.address = newVal;
+                    }
+                });
+
+                localStorage.setItem('user', JSON.stringify(user));
+
+                // Update Sidebar Name if changed
+                if (user.name) document.getElementById('sidebar-name').textContent = user.name;
+
+                btn.innerHTML = '<i class="fa-solid fa-pen" style="margin-right: 8px;"></i> Chỉnh sửa';
+                btn.style.background = '#fff1f1';
+                btn.style.color = '#6B0606';
+                alert('Thông tin đã được cập nhật!');
+                isEditing = false;
+            }
+        }
+
+        // Check Login Status & Load Data
+        document.addEventListener('DOMContentLoaded', () => {
+            const userJson = localStorage.getItem('user');
+            if (!userJson) {
+                // Not logged in, redirect to login
+                window.location.href = 'đangnhap.html';
+                return;
+            }
+
+            const user = JSON.parse(userJson);
+
+            // Populate Data
+            if (user.name) {
+                document.getElementById('sidebar-name').textContent = user.name;
+                document.getElementById('profile-fullname').textContent = user.name;
+            }
+            // Use username or separate email field if available
+            if (user.email || user.username) {
+                document.getElementById('profile-email').textContent = user.email || user.username;
+            }
+            if (user.phone) {
+                document.getElementById('profile-phone').textContent = user.phone;
+            } else {
+                document.getElementById('profile-phone').textContent = 'Chưa cập nhật';
+            }
+            if (user.dob) document.getElementById('profile-dob').textContent = user.dob;
+            if (user.address) document.getElementById('profile-address').textContent = user.address;
+
+            // Load Appointments
+            fetchAppointments(user);
+        });
+
+        async function fetchAppointments(user) {
+            try {
+                const response = await fetch('http://localhost:3000/api/appointments');
+                const appointments = await response.json();
+
+                // Filter appointments by user email or username (assuming username is email)
+                // Also match phone if available in user object
+                const userEmail = user.email || user.username || '';
+                const userPhone = user.phone || '';
+
+                const myAppointments = appointments.filter(app => {
+                    return (userEmail && app.email === userEmail) || (userPhone && app.phone === userPhone);
+                });
+
+                const tbody = document.getElementById('history-table-body');
+                tbody.innerHTML = '';
+
+                if (myAppointments.length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="3" style="text-align:center; color:#888;">Chưa có lịch hẹn nào.</td></tr>';
+                    return;
+                }
+
+                //Sort by date descending (newest first)
+                myAppointments.sort((a, b) => new Date(b.date + 'T' + b.time) - new Date(a.date + 'T' + a.time));
+
+                myAppointments.forEach(app => {
+                    const row = document.createElement('tr');
+
+                    // Format Date
+                    const dateObj = new Date(app.date);
+                    const dateStr = dateObj.toLocaleDateString('vi-VN');
+
+                    // Determine Status Badge (Mock logic based on date)
+                    let statusBadge = '<span class="status-badge status-pending">Sắp tới</span>';
+                    const appDateTime = new Date(app.date + 'T' + app.time);
+                    if (appDateTime < new Date()) {
+                        statusBadge = '<span class="status-badge status-completed">Hoàn thành</span>';
+                    }
+
+                    row.innerHTML = `
+                        <td>
+                            <div style="font-weight: 600; color: #333;">${app.service}</div>
+                            <div style="font-size: 12px; color: #888; margin-top: 4px;">
+                                <i class="fa-solid fa-user-tag"></i> 
+                                ${app.message ? 'Ghi chú: ' + app.message.substring(0, 20) + '...' : 'Không có ghi chú'}
+                            </div>
+                        </td>
+                        <td>
+                            <div style="font-weight: 500;">${app.time}</div>
+                            <div style="font-size: 12px; color: #888;">${dateStr}</div>
+                        </td>
+                        <td>${statusBadge}</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+
+            } catch (error) {
+                console.error('Error loading appointments:', error);
+            }
+        }
+
+        function logout() {
+            if (confirm('Bạn có chắc chắn muốn đăng xuất?')) {
+                localStorage.removeItem('authToken');
+                localStorage.removeItem('user');
+                window.location.href = 'đangnhap.html';
+            }
+        }
+    </script>
+</body>
+
+</html>

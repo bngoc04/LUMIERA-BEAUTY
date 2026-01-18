@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumiera AI - Soi da - Lumiera Beauty</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Imperial+Script&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .booking-container {
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+
+        .booking-image {
+            flex: 1;
+            position: relative;
+            background: #f0f0f0;
+        }
+
+        .booking-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .booking-form-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            padding: 40px;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .input-group {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            width: 100%;
+            height: 60px;
+            padding: 15px;
+            font-size: 18px;
+            border: 1px solid black;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            box-sizing: border-box;
+            background: white;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .input-field::placeholder {
+            color: #888;
+        }
+
+        .submit-btn {
+            width: 100%;
+            height: 60px;
+            background: #6B0606;
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #500404;
+        }
+
+        .grid-row {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .grid-row .input-group {
+            flex: 1;
+        }
+
+        select.input-field {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+            background-repeat: no-repeat;
+            background-position: right 15px top 50%;
+            background-size: 12px auto;
+            color: #333;
+        }
+
+        .home-link {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: black;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            z-index: 20;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .booking-container {
+                flex-direction: column;
+                height: auto;
+                overflow: auto;
+            }
+
+            .booking-image {
+                height: 300px;
+                flex: none;
+            }
+
+            .booking-form-section {
+                padding: 20px;
+            }
+
+            .grid-row {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .home-link {
+                top: 10px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="booking-container">
+        <!-- Left Side: Image -->
+        <div class="booking-image">
+            <img src="assets/home2_img_be40d97f.png" alt="Booking Background">
+            <div style="position: absolute; top: 28px; left: 34px; z-index: 10;">
+                <span
+                    style="color: black; font-size: 80px; font-weight: 400; font-family: 'Imperial Script', cursive;">Lumi</span>
+                <span
+                    style="color: #955D34; font-size: 80px; font-weight: 400; font-family: 'Imperial Script', cursive;">era</span>
+            </div>
+            <div
+                style="width: 136px; height: 5px; background: #955D34; left: 34px; top: 120px; position: absolute; z-index: 10;">
+            </div>
+        </div>
+
+        <!-- Right Side: Form -->
+        <div class="booking-form-section">
+            <a href="homepage.html" class="home-link">&larr; Back to Home</a>
+
+            <div style="width: 100%; max-width: 600px; margin-bottom: 30px;">
+                <div
+                    style="color: #955D34; font-size: 40px; font-weight: 700; margin-bottom: 10px; font-family: 'Abhaya Libre', serif;">
+                    Đặt lịch soi da</div>
+                <div style="color: black; font-size: 18px; font-weight: 400;">Schedule your visit with us</div>
+            </div>
+
+            <form id="bookingForm" style="width: 100%; max-width: 600px; display: flex; flex-direction: column;">
+                <div class="grid-row">
+                    <div class="input-group">
+                        <input type="text" name="firstName" placeholder="First Name" class="input-field" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" name="lastName" placeholder="Last Name" class="input-field" required>
+                    </div>
+                </div>
+
+                <div class="grid-row">
+                    <div class="input-group">
+                        <input type="email" name="email" placeholder="Email" class="input-field" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="tel" name="phone" placeholder="Phone Number" class="input-field" required>
+                    </div>
+                </div>
+
+                <div class="grid-row">
+                    <div class="input-group">
+                        <input type="date" name="date" class="input-field" style="color: #333;" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="time" name="time" class="input-field" style="color: #333;" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <select name="service" class="input-field" required>
+                        <option value="" disabled selected>Select Service</option>
+                        <option value="consultation">Consultation</option>
+                        <option value="facial">Facial Treatment</option>
+                        <option value="massage">Massage Therapy</option>
+                        <option value="skincare" selected>Skincare Analysis</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <textarea name="message" placeholder="Message (Optional)" class="input-field"
+                        style="height: 120px; resize: none;"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">Send message</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Check for logged in user and auto-fill
+        document.addEventListener('DOMContentLoaded', () => {
+            const userStr = localStorage.getItem('user');
+            if (userStr) {
+                const user = JSON.parse(userStr);
+                const nameParts = (user.name || '').split(' ');
+
+                if (document.querySelector('input[name="firstName"]')) document.querySelector('input[name="firstName"]').value = nameParts[0] || '';
+                if (document.querySelector('input[name="lastName"]')) document.querySelector('input[name="lastName"]').value = nameParts.slice(1).join(' ') || '';
+            }
+        });
+
+        document.getElementById('bookingForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const originalText = btn.textContent;
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch('http://localhost:3000/api/appointments', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    alert('Booking successful! We will contact you shortly.');
+                    window.location.href = 'homepage2.html';
+                } else {
+                    alert('Booking failed. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred. Please check your connection.');
+            } finally {
+                btn.textContent = originalText;
+                btn.disabled = false;
+            }
+        });
+    </script>
+</body>
+
+</html>

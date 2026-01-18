@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Lumiera Beauty</title>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Imperial+Script&display=swap"
+        rel="stylesheet">
+
+    <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- Sidebar Overlay for Mobile -->
+    <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <!-- Sidebar -->
+    <aside class="admin-sidebar" id="sidebar">
+        <div class="sidebar-logo">
+            Lumiera Beauty
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-link active" data-target="dashboard-view" data-title="Dashboard Tổng quan">
+                <i class="fa-solid fa-gauge"></i>
+                Dashboard
+            </a>
+            <a href="#" class="nav-link" data-target="calendar-view" data-title="Lịch biểu (Calendar)">
+                <i class="fa-solid fa-calendar-days"></i>
+                Lịch biểu
+            </a>
+
+            <a href="#" class="nav-link" data-target="appointments-view" data-title="Quản lý Lịch hẹn">
+                <i class="fa-solid fa-calendar-check"></i>
+                Đặt lịch
+            </a>
+            <a href="#" class="nav-link" data-target="services-view" data-title="Quản lý Dịch vụ">
+                <i class="fa-solid fa-spa"></i>
+                Dịch vụ
+            </a>
+            <a href="#" class="nav-link" data-target="customers-view" data-title="Quản lý Khách hàng">
+                <i class="fa-solid fa-users"></i>
+                Khách hàng
+            </a>
+            <a href="#" class="nav-link" data-target="settings-view" data-title="Cài đặt Hệ thống">
+                <i class="fa-solid fa-gear"></i>
+                Cài đặt
+            </a>
+            <a href="#" class="nav-link" data-target="attendance-view" data-title="Quản lý Chấm công">
+                <i class="fa-solid fa-clipboard-user"></i>
+                Chấm công
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <button class="logout-btn" onclick="logout(event)">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Đăng xuất
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+
+        <!-- Header -->
+        <header class="admin-header">
+            <div class="header-left">
+                <button class="menu-toggle" onclick="toggleSidebar()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="header-title" id="page-title">Dashboard Tổng quan</div>
+            </div>
+
+            <div class="admin-profile" onclick="toggleAdminMenu(event)" style="position: relative; cursor: pointer;">
+                <div class="admin-avatar">
+                    <img src="assets/home2_img_be40d97f.png" alt="Admin">
+                </div>
+                <div class="admin-info">
+                    <span class="admin-name">Admin User</span>
+                    <span class="admin-role">Quản trị viên</span>
+                </div>
+                <i class="fa-solid fa-chevron-down" style="font-size: 12px; color: #888;"></i>
+
+                <!-- Dropdown Menu -->
+                <div id="admin-dropdown" class="admin-dropdown-menu"
+                    style="display: none; position: absolute; top: 100%; right: 0; background: white; border: 1px solid #eee; border-radius: 8px; padding: 10px; width: 180px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); flex-direction: column; gap: 5px; z-index: 1002; margin-top: 10px;">
+                    <a href="#" class="dropdown-item"
+                        style="display: block; padding: 10px 12px; text-decoration: none; color: #333; font-family: Inter; font-size: 14px; border-radius: 4px; transition: background 0.2s;">
+                        <i class="fa-regular fa-user" style="margin-right: 8px;"></i> Thông tin
+                    </a>
+                    <div style="height: 1px; background: #eee; margin: 5px 0;"></div>
+                    <a href="#" onclick="logout(event)" class="dropdown-item"
+                        style="display: block; padding: 10px 12px; text-decoration: none; color: #d32f2f; font-family: Inter; font-size: 14px; border-radius: 4px; transition: background 0.2s;">
+                        <i class="fa-solid fa-right-from-bracket" style="margin-right: 8px;"></i> Đăng xuất
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard View -->
+        <div id="dashboard-view" class="dashboard-content content-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">TỔNG LỊCH HẸN</span>
+                        <div class="stat-icon primary"><i class="fa-solid fa-calendar"></i></div>
+                    </div>
+                    <div class="stat-value" id="total-appointments-val">0</div>
+                    <div class="stat-change change-up">
+                        <i class="fa-solid fa-arrow-up"></i>
+                        <span>12% so với tháng trước</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">KHÁCH HÀNG MỚI</span>
+                        <div class="stat-icon blue"><i class="fa-solid fa-user-plus"></i></div>
+                    </div>
+                    <div class="stat-value" id="new-customers-val">0</div>
+                    <div class="stat-change change-up">
+                        <i class="fa-solid fa-arrow-up"></i>
+                        <span>8% so với tuần trước</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">DOANH THU THÁNG</span>
+                        <div class="stat-icon green"><i class="fa-solid fa-sack-dollar"></i></div>
+                    </div>
+                    <div class="stat-value" id="revenue-val">0</div>
+                    <div class="stat-change change-up">
+                        <i class="fa-solid fa-arrow-up"></i>
+                        <span>5.4% tăng trưởng</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">ĐƠN CHỜ DUYỆT</span>
+                        <div class="stat-icon orange"><i class="fa-solid fa-clock"></i></div>
+                    </div>
+                    <div class="stat-value" id="pending-appointments-val">0</div>
+                    <div class="stat-change change-down">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <span>Cần xử lý ngay</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Chart Section -->
+            <div class="table-container" style="margin-top: 30px;">
+                <h2 class="section-title">Thống kê Trạng thái Lịch hẹn</h2>
+                <div style="height: 300px; display: flex; justify-content: center;">
+                    <canvas id="appointmentsChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Mini Table for Dashboard -->
+            <div class="table-container">
+                <div class="section-header">
+                    <h2 class="section-title">Lịch hẹn gần đây</h2>
+                    <button class="action-btn"
+                        onclick="document.querySelector('[data-target=appointments-view]').click()">
+                        Xem tất cả <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Khách hàng</th>
+                            <th>Dịch vụ</th>
+                            <th>Ngày & Giờ</th>
+                            <th>Trạng thái</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recent-appointments-body">
+                        <!-- JS populated -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Appointments View -->
+        <div id="appointments-view" class="dashboard-content content-section hidden">
+            <div class="table-container">
+                <div class="section-header">
+                    <h2 class="section-title">Tất cả lịch hẹn</h2>
+                    <div class="filter-group" style="margin-bottom:0;">
+                        <input type="date" class="filter-select">
+                        <select class="filter-select">
+                            <option>Tất cả trạng thái</option>
+                            <option>Chờ duyệt</option>
+                            <option>Đã xác nhận</option>
+                            <option>Đã hoàn thành</option>
+                            <option>Đã hủy</option>
+                        </select>
+                        <button class="action-btn"><i class="fa-solid fa-filter"></i> Lọc</button>
+                    </div>
+                </div>
+
+                <table class="data-table" id="appointments-table">
+                    <thead>
+                        <tr>
+                            <th>Khách hàng</th>
+                            <th>Dịch vụ</th>
+                            <th>Ngày & Giờ</th>
+                            <th>SĐT</th>
+                            <th>Trạng thái</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- JS Populated -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Services View -->
+        <div id="services-view" class="dashboard-content content-section hidden">
+            <div class="table-container">
+                <div class="section-header">
+                    <h2 class="section-title">Danh sách Dịch vụ</h2>
+                    <button class="action-btn" onclick="openAddServiceModal()">
+                        <i class="fa-solid fa-plus"></i>
+                        Thêm dịch vụ
+                    </button>
+                </div>
+                <table class="data-table" id="services-table">
+                    <thead>
+                        <tr>
+                            <th>Tên Dịch vụ</th>
+                            <th>Thời lượng</th>
+                            <th>Giá (VNĐ)</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- JS Populated -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Customers View -->
+        <div id="customers-view" class="dashboard-content content-section hidden">
+            <div class="table-container">
+                <div class="section-header">
+                    <h2 class="section-title">Danh sách Khách hàng</h2>
+                    <div class="search-box">
+                        <input type="text" placeholder="Tìm kiếm khách hàng...">
+                    </div>
+                </div>
+                <table class="data-table" id="customers-table">
+                    <thead>
+                        <tr>
+                            <th>Tên</th>
+                            <th>Email</th>
+                            <th>SĐT</th>
+                            <th>Tổng đơn</th>
+                            <th>Lần cuối</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- JS Populated -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Settings View -->
+        <div id="settings-view" class="dashboard-content content-section hidden">
+            <div class="table-container" style="max-width: 700px; margin: 0 auto;">
+                <h2 class="section-title"
+                    style="margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 15px;">Cài đặt chung</h2>
+
+                <form onsubmit="event.preventDefault(); alert('Đã lưu thay đổi!');">
+                    <div class="form-group">
+                        <label class="form-label">Tên Website</label>
+                        <input type="text" class="form-control" value="Lumiera Beauty">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Email Liên hệ</label>
+                        <input type="email" class="form-control" value="contact@lumierabeauty.com">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Số điện thoại</label>
+                        <input type="text" class="form-control" value="0901234567">
+                    </div>
+
+                    <h2 class="section-title"
+                        style="margin: 30px 0 20px; border-bottom: 1px solid #eee; padding-bottom: 15px;">Bảo mật</h2>
+                    <div class="form-group">
+                        <label class="form-label">Mật khẩu hiện tại</label>
+                        <input type="password" class="form-control" placeholder="••••••••">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Mật khẩu mới</label>
+                        <input type="password" class="form-control" placeholder="••••••••">
+                    </div>
+
+                    <div class="form-group" style="margin-top: 30px; text-align: right;">
+                        <button type="submit" class="btn-primary">Lưu thay đổi</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Attendance View -->
+        <div id="attendance-view" class="dashboard-content content-section hidden">
+            <div class="table-container">
+                <div class="section-header">
+                    <h2 class="section-title">Danh sách Chấm công</h2>
+                    <button class="action-btn" onclick="openAddAttendanceModal()">
+                        <i class="fa-solid fa-plus"></i>
+                        Thêm Chấm công
+                    </button>
+                </div>
+                <table class="data-table" id="attendance-table">
+                    <thead>
+                        <tr>
+                            <th>Nhân viên</th>
+                            <th>Ngày</th>
+                            <th>Giờ vào</th>
+                            <th>Giờ ra</th>
+                            <th>Trạng thái</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- JS Populated -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Calendar View -->
+        <div id="calendar-view" class="dashboard-content content-section hidden">
+            <div class="table-container">
+                <div id='calendar'></div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Add Attendance Modal -->
+    <div id="addAttendanceModal" class="modal"
+        style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4);">
+        <div class="modal-content"
+            style="background-color: #fefefe; margin: 5% auto; padding: 30px; width: 90%; max-width: 500px; border-radius: 16px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+                <h2 style="margin: 0; font-family: 'Abhaya Libre', serif; color: var(--secondary-color);">Thêm/Cập nhật
+                    Chấm công</h2>
+                <span onclick="closeAddAttendanceModal()"
+                    style="color: #999; font-size: 24px; cursor: pointer; transition: color 0.2s;">&times;</span>
+            </div>
+            <form id="addAttendanceForm">
+                <div class="form-group">
+                    <label class="form-label">Tên Nhân viên</label>
+                    <input type="text" name="employeeName" class="form-control" required
+                        placeholder="Nhập tên nhân viên...">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Ngày</label>
+                    <input type="date" name="date" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Giờ vào (Check-in)</label>
+                    <input type="time" name="checkIn" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Giờ ra (Check-out)</label>
+                    <input type="time" name="checkOut" class="form-control">
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; margin-top: 10px;">Lưu</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add Service Modal -->
+    <div id="addServiceModal" class="modal"
+        style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4);">
+        <div class="modal-content"
+            style="background-color: #fefefe; margin: 5% auto; padding: 30px; width: 90%; max-width: 500px; border-radius: 16px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+                <h2 style="margin: 0; font-family: 'Abhaya Libre', serif; color: var(--secondary-color);">Thêm Dịch Vụ
+                    Mới</h2>
+                <span onclick="closeAddServiceModal()"
+                    style="color: #999; font-size: 24px; cursor: pointer; transition: color 0.2s;">&times;</span>
+            </div>
+            <form id="addServiceForm">
+                <div class="form-group">
+                    <label class="form-label">Tên Dịch Vụ</label>
+                    <input type="text" name="name" class="form-control" required placeholder="Nhập tên dịch vụ...">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Thời lượng</label>
+                    <input type="text" name="duration" class="form-control" required placeholder="Ví dụ: 60 mins">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Giá (VNĐ)</label>
+                    <input type="text" name="price" class="form-control" required placeholder="Ví dụ: 500.000">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Mô tả</label>
+                    <textarea name="description" class="form-control" style="height: 100px; resize: vertical;" required
+                        placeholder="Mô tả ngắn về dịch vụ..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; margin-top: 10px;">Thêm Dịch Vụ</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Mobile Sidebar Toggle Script -->
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('active');
+            document.querySelector('.sidebar-overlay').classList.toggle('active');
+        }
+    </script>
+    <script src="admin.js"></script>
+</body>
+
+</html>

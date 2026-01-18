@@ -1,0 +1,181 @@
+{
+  "appointments": [
+    {
+      "id": "1737110002",
+      "firstName": "Nguyễn",
+      "lastName": "Hồng",
+      "email": "nguyenhong@gmail.com",
+      "phone": "0987654321",
+      "date": "2026-01-16",
+      "time": "14:30",
+      "service": "Massage body tinh dầu",
+      "status": "completed",
+      "createdAt": "2026-01-11T09:00:00.000Z"
+    },
+    {
+      "id": "1737110003",
+      "firstName": "Trần",
+      "lastName": "Oanh",
+      "email": "tranoanh@gmail.com",
+      "phone": "0905112233",
+      "date": "2026-01-17",
+      "time": "10:00",
+      "service": "Soi da và tư vấn",
+      "status": "confirmed",
+      "createdAt": "2026-01-12T10:30:00.000Z"
+    },
+    {
+      "id": "1737110004",
+      "firstName": "Phạm",
+      "lastName": "Yến",
+      "email": "phamyen@gmail.com",
+      "phone": "0934123456",
+      "date": "2026-01-18",
+      "time": "16:00",
+      "service": "Trang điểm cô dâu",
+      "status": "confirmed",
+      "createdAt": "2026-01-17T15:20:00.000Z"
+    },
+    {
+      "id": "1737110005",
+      "firstName": "Vũ",
+      "lastName": "Hà",
+      "email": "vuha@gmail.com",
+      "phone": "0977889900",
+      "date": "2026-01-19",
+      "time": "13:00",
+      "service": "Nặn mụn chuẩn y khoa",
+      "status": "confirmed",
+      "createdAt": "2026-01-17T18:45:00.000Z"
+    },
+    {
+      "id": "1737110006",
+      "firstName": "Đặng",
+      "lastName": "Tuấn",
+      "email": "dangtuan@gmail.com",
+      "phone": "0944001122",
+      "date": "2026-01-20",
+      "time": "11:00",
+      "service": "Massage body tinh dầu",
+      "status": "confirmed",
+      "createdAt": "2026-01-15T11:00:00.000Z"
+    },
+    {
+      "id": "1737110007",
+      "firstName": "Hoàng",
+      "lastName": "Lan",
+      "email": "hoanglan@gmail.com",
+      "phone": "0911223344",
+      "date": "2026-01-21",
+      "time": "15:30",
+      "service": "Chăm sóc da mặt chuyên sâu",
+      "status": "pending",
+      "createdAt": "2026-01-17T20:00:00.000Z"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "name": "Chăm sóc da mặt chuyên sâu",
+      "description": "Làm sạch, hút mụn, điện di tinh chất và đắp mặt nạ thảo dược.",
+      "duration": "60 phút",
+      "price": "500.000"
+    },
+    {
+      "id": "3",
+      "name": "Massage body tinh dầu",
+      "description": "Thư giãn toàn thân với tinh chất sả chanh tự nhiên.",
+      "duration": "90 phút",
+      "price": "750.000"
+    },
+    {
+      "id": "4",
+      "name": "Nặn mụn chuẩn y khoa",
+      "description": "Lấy nhân mụn tận gốc bằng dụng cụ vô trùng, không để lại sẹo.",
+      "duration": "45 phút",
+      "price": "350.000"
+    },
+    {
+      "id": "5",
+      "name": "Trang điểm cô dâu",
+      "description": "Phong cách tự nhiên, bền màu suốt ngày dài.",
+      "duration": "120 phút",
+      "price": "2.000.000"
+    }
+  ],
+  "customers": [
+    {
+      "id": "1",
+      "name": "Lê Minh",
+      "email": "leminh@gmail.com",
+      "phone": "0912345678",
+      "totalBookings": 1,
+      "lastBooking": "2026-01-15"
+    },
+    {
+      "id": "2",
+      "name": "Nguyễn Hồng",
+      "email": "nguyenhong@gmail.com",
+      "phone": "0987654321",
+      "totalBookings": 1,
+      "lastBooking": "2026-01-16"
+    },
+    {
+      "id": "3",
+      "name": "Trần Oanh",
+      "email": "tranoanh@gmail.com",
+      "phone": "0905112233",
+      "totalBookings": 1,
+      "lastBooking": "2026-01-17"
+    },
+    {
+      "id": "4",
+      "name": "Phạm Yến",
+      "email": "phamyen@gmail.com",
+      "phone": "0934123456",
+      "totalBookings": 0,
+      "lastBooking": "-"
+    }
+  ],
+  "users": [
+    {
+      "id": "admin",
+      "username": "admin@lumiera.com",
+      "password": "admin123",
+      "name": "Administrator",
+      "role": "admin"
+    }
+  ],
+  "settings": {
+    "siteName": "Lumiera Beauty Spa",
+    "contactEmail": "contact@lumiera.com",
+    "phone": "0123 456 789",
+    "address": "123 Đường ABC, Hà Nội"
+  },
+  "attendance": [
+    {
+      "id": "1",
+      "employeeName": "Nguyễn Văn A",
+      "date": "2026-01-17",
+      "checkIn": "08:00",
+      "checkOut": "17:30",
+      "status": "present"
+    },
+    {
+      "id": "2",
+      "employeeName": "Trần Thị B",
+      "date": "2026-01-17",
+      "checkIn": "08:15",
+      "checkOut": "18:00",
+      "status": "present"
+    },
+    {
+      "id": "3",
+      "employeeName": "Nguyễn Văn A",
+      "date": "2026-01-18",
+      "checkIn": "07:55",
+      "checkOut": null,
+      "status": "present"
+    }
+  ]
+}
